@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="../libraries/Hover-master/css/hover-min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <title>MobileTech</title>
+  </head>
+
+  <body>
+    <!-- Sticky header -->
+    <header>
+      <div class="burger">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+      </div>
+
+      <div class="store">
+        <img src="../Images/Logo/Logo.png" alt="Logo" />
+        <h1><a href="../index.html">MOBILE TECH</a></h1>
+      </div>
+
+      <ul class="brands-container">
+        <li class="hvr-underline-from-left">
+          <a href="../htmls/otherBrands.html">Samsung</a>
+        </li>
+        <li class="hvr-underline-from-left">
+          <a href="../htmls/otherBrands.html">iPhone</a>
+        </li>
+        <li class="hvr-underline-from-left">
+          <a href="../htmls/otherBrands.html">Xiaomi</a>
+        </li>
+        <li class="hvr-underline-from-left">
+          <a href="../htmls/otherBrands.html">Other brands</a>
+        </li>
+      </ul>
+
+      <ul class="right-side-header">
+        <li class="hvr-underline-from-left">
+          <a href="../index.html">Home</a>
+        </li>
+
+        <li class="hvr-underline-from-left" id="divide">
+          <a href="../htmls/about.html">About</a>
+        </li>
+
+        <li>
+          <a href="#" class="hvr-icon-float" id="search-box">
+            <i class="fa fa-search hvr-icon"></i>
+          </a>
+        </li>
+
+        <li class="shopping-card-container">
+          <a href="#" class="hvr-icon-float shopping-icon">
+            <i class="fa fa-shopping-cart hvr-icon"></i>
+          </a>
+
+          <div class="shopping-card">
+            <table class="added-phones">
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>remove</th>
+              </tr>
+            </table>
+          </div>
+        </li>
+
+        <li>
+          <a href="#" class="hvr-icon-float login-icon"
+            ><i class="fa fa-user hvr-icon"></i>
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <!-- side nav -->
+    <div class="side-nav-container">
+      <div class="inner-burger">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+      </div>
+
+      <div class="header">
+        <img src="../Images/Logo/Logo.png" alt="Logo" />
+
+        <h1><a href="../index.html">MOBILE TECH</a></h1>
+      </div>
+
+      <h1 class="looking-brands">Looking for other brands ?</h1>
+
+      <div class="items-container">
+        <li class="hvr-underline-from-left">
+          <a href="../htmls/otherBrands.html">Samsung</a>
+        </li>
+        <li class="hvr-underline-from-left">
+          <a href="../htmls/otherBrands.html">iPhone</a>
+        </li>
+        <li class="hvr-underline-from-left">
+          <a href="../htmls/otherBrands.html">Xiaomi</a>
+        </li>
+        <li class="hvr-underline-from-left active-item">
+          <a href="../htmls/otherBrands.html">Other brands</a>
+        </li>
+      </div>
+
+      <h1 class="shortcuts-tools">Shotrcuts and Tools</h1>
+
+      <div class="items-container">
+        <li class="hvr-underline-from-left">
+          <a href="../htmls/otherBrands.html">New Release</a>
+        </li>
+
+        <li class="hvr-underline-from-left">
+          <a href="../htmls/otherBrands.html">Top Selling</a>
+        </li>
+
+        <li class="hvr-underline-from-left active-item">
+          <a href="../htmls/compare.html">Compare</a>
+        </li>
+      </div>
+
+      <div class="home-about-side">
+        <a href="../index.html">Home</a>
+        <a href="../htmls/about.html">About</a>
+      </div>
+    </div>
+
+    <!-- scroll indicator -->
+    <div class="scroll-indicator"></div>
+    <!-- Sticky header -->
+
+    <!-- Wrapper container (Main) -->
+    <div class="outter-container">
+      <!-- main container -->
+      <div class="main-container">
+        <main>
+          <div class="show-cards-container">
+            <div class="filter-container">
+              <div class="selected-filter">
+                All Phones
+                <i class="fas fa-chevron-down"></i>
+              </div>
+
+              <div class="options-container">
+                <label for="all">
+                  <input type="radio" name="radio" id="all" checked />
+                  All Phones
+                </label>
+
+                <label for="samsung">
+                  <input type="radio" name="radio" id="samsung" />
+                  Samsung</label
+                >
+
+                <label for="apple">
+                  <input type="radio" name="radio" id="apple" />
+                  Apple</label
+                >
+
+                <label for="xiaomi">
+                  <input type="radio" name="radio" id="xiaomi" />
+                  Xiaomi</label
+                >
+              </div>
+            </div>
+
+            <div class="sort-container">
+              <div class="selected-sort">
+                Default
+                <i class="fas fa-chevron-down"></i>
+              </div>
+
+              <div class="sort-options-container">
+                <label for="default">
+                  <input type="radio" name="option" id="default" />
+                  Default</label
+                >
+
+                <label for="new">
+                  <input type="radio" name="option" id="new" />
+                  New</label
+                >
+
+                <label for="top">
+                  <input type="radio" name="option" id="top" />
+                  Top</label
+                >
+
+                <label for="price-high">
+                  <input type="radio" name="option" id="price-high" />
+                  Price High</label
+                >
+
+                <label for="price-low">
+                  <input type="radio" name="option" id="price-low" />
+                  Price Low</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <a href="../htmls/Apple-iPhone12.html" class="show-sample">Click To See A Sample Page Of Phone Detail</a>
+
+          <div class="phones-container">
+            <!-- all products and phones will be added here AUTOMATICLLY by AJAX-->
+          </div>
+          <button class="load-more" title="Load more phones">
+            Load More ...
+          </button>
+        </main>
+      </div>
+      <!-- main container -->
+    </div>
+    <!-- Wrapper container (Main) -->
+
+    <!--footer container -->
+    <div class="footer-container">
+      <footer>
+        <!-- logo container + explaination -->
+        <div class="footer-logo-container">
+          <img src="../Images/Logo/Logo.png" alt="Logo" />
+
+          <h1><a href="#">MOBILE TECH</a></h1>
+
+          <p>
+            Mobile Tech team, Everyday without fail are looking for service,
+            here we trying to give the qualities that you genuinely deserve.
+          </p>
+        </div>
+
+        <ul class="footer-services-container">
+          <h1>Services</h1>
+          <li><a href="#">Delivery</a></li>
+          <li class="active-footer"><a href="#">Compare</a></li>
+          <li><a href="#">User Guides</a></li>
+          <li><a href="#">Careers</a></li>
+          <li class="active-footer"><a href="#">About Us</a></li>
+        </ul>
+
+        <ul class="footer-products-container">
+          <h1>Products</h1>
+          <li class="active-footer"><a href="#go-top-sell">Top Selling</a></li>
+          <li class="active-footer">
+            <a href="#go-new-release">New Release</a>
+          </li>
+          <li class="active-footer"><a href="#">All Brands</a></li>
+          <li><a href="#">Special Gifts Terms</a></li>
+        </ul>
+
+        <ul class="footer-newsletter-container">
+          <h1>News Letter</h1>
+          <li>
+            <a href="#">Subscribe</a>
+          </li>
+          <li><a href="#">Unsubscribe</a></li>
+          <div class="social-container">
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-youtube"></a>
+          </div>
+        </ul>
+      </footer>
+
+      <!-- copy right -->
+      <address class="copy-right">
+        Copyright &#169 2021-2021 All Rights Reserved to
+        <a href="./about.html" title="The Developer of the website">Mahdi Zandian</a>
+      </address>
+    </div>
+
+    <!-- Modal parts -------------------------------------------->
+
+    <!-- search modal-box -->
+    <div class="modal-container">
+      <span class="modal-close">
+        <i class="fas fa-times"></i>
+      </span>
+      <div class="modal">
+        <h1>What are you looking for ?</h1>
+
+        <input
+          type="text"
+          placeholder="iPhone 12 pro max"
+          id="search-box-input"
+        />
+
+        <i class="fa fa-search search-icon"></i>
+
+        <span class="clear-search">
+          <i class="far fa-times-circle"></i>
+        </span>
+      </div>
+    </div>
+
+    <!-- login account modal-box -->
+    <div class="login-container">
+      <form action="#" class="login-form">
+        <span class="close-login">
+          <i class="fas fa-times"></i>
+        </span>
+        <h1>Login</h1>
+
+        <label for="username">
+          <div>Username</div>
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            class="validate"
+            id="username"
+            placeholder="type your username"
+          />
+        </label>
+
+        <label for="password">
+          <div>Password</div>
+          <i class="fas fa-lock"></i>
+          <input
+            class="validate"
+            type="password"
+            id="password"
+            placeholder="type your password"
+          />
+        </label>
+
+        <div class="forgot-password"><a href="#">Forgot password?</a></div>
+
+        <label for="submit">
+          <input type="submit" id="submit" value="Login" />
+        </label>
+
+        <div class="sign-up-options">
+          <h3>Or Login Using</h3>
+
+          <div class="logo-social-container">
+            <div class="face-book">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <div class="twitter">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+
+            <div class="google">
+              <a href="#"><i class="fab fa-google"></i></a>
+            </div>
+          </div>
+
+          <div class="signup"><a href="#">Create a new accont</a></div>
+        </div>
+      </form>
+    </div>
+
+    <!-- scripts -->
+    <script src="../JS/header.js"></script>
+    <script src="../JS/otherBrands/phonesData.js"></script>
+    <script src="../JS/otherBrands/filterShow.js"></script>
+    <!-- scripts -->
+  </body>
+</html>

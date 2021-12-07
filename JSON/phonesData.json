@@ -1,0 +1,278 @@
+{
+  "samsung": [
+    {
+      "name": "Galaxy S21",
+      "image": "../Images/Mobiles/samsung/galaxy-s21.jpg",
+      "mainPrice": "799",
+      "off": "true",
+      "discount": "700",
+      "discountDays": "5",
+      "new": "true",
+      "top": "fasle",
+      "specs": [
+        "1440 x 3200 pixels, 20:9 ratio (~515 ppi density)",
+        "Android 11, One UI 3.1",
+        "Octa-core (1x2.9 GHz Cortex-X1 & 3x2.80 GHz Cortex-A78 & 4x2.2 GHz Cortex-A55) - International",
+        "128GB 12GB RAM, 256GB 12GB RAM, 512GB 16GB RAM",
+        "108 MP , 10 MP, 10 MP, 12 MP",
+        "40 MP"
+      ]
+    },
+    {
+      "name": "Galaxy Note20",
+      "image": "../Images/Mobiles/samsung/galaxy-note20.jpg",
+      "mainPrice": "1299",
+      "off": "true",
+      "discount": "849",
+      "discountDays": "3",
+      "new": "false",
+      "top": "true",
+      "specs": [
+        "1080 x 2400 pixels, 20:9 ratio (~393 ppi density)",
+        "Android 10, upgradable to Android 11, One UI 3.0",
+        "Octa-core (2x2.73 GHz Mongoose M5 & 2x2.50 GHz Cortex-A76 & 4x2.0 GHz Cortex-A55) - Global",
+        "256GB 8GB RAM",
+        "12 MP , 64 MP, 12 MP",
+        "10 MP"
+      ]
+    },
+    {
+      "name": "Galaxy S10 256G",
+      "image": "../Images/Mobiles/samsung/galaxy-s10.jpg",
+      "mainPrice": "1149",
+      "off": "true",
+      "discount": "999",
+      "discountDays": "5",
+      "new": "false",
+      "top": "fasle",
+      "specs": [
+        "1440 x 3040 pixels, 19:9 ratio (~550 ppi density)",
+        "Android 9.0 (Pie), upgradable to Android 11, One UI 3.0",
+        "Octa-core (2x2.73 GHz Mongoose M4 & 2x2.31 GHz Cortex-A75 & 4x1.95 GHz Cortex-A55) - EMEA/LATAM",
+        "128GB 8GB RAM, 512GB 8GB RAM",
+        "12 MP , 12 MP, 16 MP",
+        "10 MP"
+      ]
+    },
+    {
+      "name": "Galaxy Z Fold",
+      "image": "../Images/Mobiles/samsung/galaxy-zfold.jpg",
+      "mainPrice": "1799",
+      "off": "true",
+      "discount": "1199",
+      "discountDays": "1",
+      "new": "true",
+      "top": "fasle",
+      "specs": [
+        "Super AMOLED, Corning Gorilla Glass Victus 6.23 inches, 816 x 2260 pixels, 25:9 ratio",
+        "Android 10, upgradable to Android 11, One UI 3.1",
+        "Octa-core (1x3.09 GHz Kryo 585 & 3x2.42 GHz Kryo 585 & 4x1.8 GHz Kryo 585)",
+        "256GB 12GB RAM, 512GB 12GB RAM",
+        "12 MP , 12 MP, 12 MP",
+        "10 MP"
+      ]
+    },
+    {
+      "name": "Galaxy A52",
+      "image": "../Images/Mobiles/samsung/galaxy-a52.jpg",
+      "mainPrice": "499",
+      "off": "true",
+      "discount": "374",
+      "discountDays": "10",
+      "new": "false",
+      "top": "true",
+      "specs": [
+        "1080 x 2400 pixels, 20:9 ratio (~407 ppi density)",
+        "Android 11, One UI 3.1",
+        "Octa-core (2x2.3 GHz Kryo 465 Gold & 6x1.8 GHz Kryo 465 Silver)",
+        "128GB 4GB RAM, 128GB 6GB RAM, 128GB 8GB RAM, 256GB 8GB RAM",
+        "64 MP, 12 MP, 5 MP, 5 MP",
+        "32 MP"
+      ]
+    }
+  ],
+  "iphone": [
+    {
+      "name": "iPhone 11 Pro Max",
+      "image": "../Images/Mobiles/iphone/iphone-11promax.jpg",
+      "mainPrice": "999",
+      "off": "true",
+      "discount": "799",
+      "discountDays": "7",
+      "new": "false",
+      "top": "true",
+      "specs": [
+        "1242 x 2688 pixels, 19.5:9 ratio (~458 ppi density)",
+        "iOS 13, upgradable to iOS 14.6",
+        "Hexa-core (2x2.65 GHz Lightning + 4x1.8 GHz Thunder)",
+        "64GB 4GB RAM, 256GB 4GB RAM, 512GB 4GB RAM",
+        "12 MP , 12 MP, 12 MP",
+        "12 MP"
+      ]
+    },
+    {
+      "name": "iPhone XR",
+      "image": "../Images/Mobiles/iphone/iphone-xr.jpg",
+      "mainPrice": "499",
+      "off": "true",
+      "discount": "299",
+      "discountDays": "7",
+      "new": "false",
+      "top": "true",
+      "specs": [
+        "828 x 1792 pixels, 19.5:9 ratio (~326 ppi density)",
+        "iOS 12, upgradable to iOS 14.6",
+        "Hexa-core (2x2.5 GHz Vortex + 4x1.6 GHz Tempest)",
+        "64GB 3GB RAM, 128GB 3GB RAM, 256GB 3GB RAM",
+        "12 MP",
+        "7 MP"
+      ]
+    },
+    {
+      "name": "iPhone 12 64G",
+      "image": "../Images/Mobiles/iphone/iphone-12.jpg",
+      "mainPrice": "829",
+      "off": "true",
+      "discount": "629",
+      "discountDays": "5",
+      "new": "true",
+      "top": "fasle",
+      "specs": [
+        "1170 x 2532 pixels, 19.5:9 ratio (~460 ppi density)",
+        "iOS 14.1, upgradable to iOS 14.6",
+        "Hexa-core (2x3.1 GHz Firestorm + 4x1.8 GHz Icestorm)",
+        "128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB RAM",
+        "12 MP, 12 MP, 12 MP",
+        "12 MP"
+      ]
+    },
+    {
+      "name": "iPhone 12 pro",
+      "image": "../Images/Mobiles/iphone/iphone-12pro.jpg",
+      "mainPrice": "999",
+      "off": "true",
+      "discount": "799",
+      "discountDays": "1",
+      "new": "true",
+      "top": "false",
+      "specs": [
+        "1284 x 2778 pixels, 19.5:9 ratio (~458 ppi density)",
+        "iOS 14.1, upgradable to iOS 14.6",
+        "Hexa-core (2x3.1 GHz Firestorm + 4x1.8 GHz Icestorm)",
+        "128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB RAM",
+        "12 MP, 12 MP, 12 MP",
+        "12 MP"
+      ]
+    },
+    {
+      "name": "iPhone X 256G",
+      "image": "../Images/Mobiles/iphone/iphone-x.jpg",
+      "mainPrice": "329",
+      "off": "true",
+      "discount": "280",
+      "discountDays": "5",
+      "new": "false",
+      "top": "false",
+      "specs": [
+        "1125 x 2436 pixels, 19.5:9 ratio (~458 ppi density)",
+        "iOS 11.1.1, upgradable to iOS 14.6",
+        "Hexa-core 2.39 GHz (2x Monsoon + 4x Mistral)",
+        "64GB 3GB RAM, 256GB 3GB RAM",
+        "12 MP, 12 MP",
+        "7 MP"
+      ]
+    }
+  ],
+  "xiaomi": [
+    {
+      "name": "Xiaomi Mi11 Ultra",
+      "image": "../Images/Mobiles/xiaomi/xiaomi-mi11ultra.jpg",
+      "mainPrice": "1125",
+      "off": "true",
+      "discount": "899",
+      "discountDays": "5",
+      "new": "true",
+      "top": "false",
+      "specs": [
+        "1440 x 3200 pixels, 20:9 ratio (~515 ppi density)",
+        "Android 11, MIUI 12.5",
+        "Octa-core (1x2.84 GHz Kryo 680 & 3x2.42 GHz Kryo 680 & 4x1.80 GHz Kryo 680)",
+        "256GB 8GB RAM, 256GB 12GB RAM, 512GB 12GB RAM",
+        "50 MP, 48 MP, 48 MP",
+        "20 MP"
+      ]
+    },
+    {
+      "name": "Xiaomi Redmi Note10",
+      "image": "../Images/Mobiles/xiaomi/xiaomi-redminote10.jpg",
+      "mainPrice": "1099",
+      "off": "true",
+      "discount": "850",
+      "discountDays": "2",
+      "new": "false",
+      "top": "true",
+      "specs": [
+        "1080 x 2400 pixels, 20:9 ratio (~409 ppi density)",
+        "Android 11, MIUI 12",
+        "Octa-core (2x2.2 GHz Kryo 460 Gold & 6x1.7 GHz Kryo 460 Silver)",
+        "64GB 4GB RAM, 128GB 4GB RAM, 128GB 6GB RAM",
+        "48 MP, 8 MP, 2 MP, 2 MP",
+        "13 MP"
+      ]
+    },
+    {
+      "name": "Xiaomi Redmi 9t",
+      "image": "../Images/Mobiles/xiaomi/xiaomi-redmi9t.jpg",
+      "mainPrice": "191",
+      "off": "flase",
+      "discount": "191",
+      "discountDays": "0",
+      "new": "fasle",
+      "top": "false",
+      "specs": [
+        "1080 x 2340 pixels, 19.5:9 ratio (~395 ppi density)",
+        "Android 10, MIUI 12",
+        "Octa-core (4x2.0 GHz Kryo 260 Gold & 4x1.8 GHz Kryo 260 Silver)",
+        "64GB 4GB RAM, 128GB 4GB RAM, 128GB 6GB RAM",
+        "48 MP, 8 MP, 2 MP, 2 MP",
+        "8 MP"
+      ]
+    },
+    {
+      "name": "Xiaomi Redmi Note7",
+      "image": "../Images/Mobiles/xiaomi/xiaomi-redminote7.jpg",
+      "mainPrice": "294",
+      "off": "true",
+      "discount": "200",
+      "discountDays": "7",
+      "new": "false",
+      "top": "true",
+      "specs": [
+        "1080 x 2340 pixels, 19.5:9 ratio (~409 ppi density)",
+        "Android 9.0 (Pie), planned upgrade to Android 10, MIUI 12",
+        "Octa-core (4x2.2 GHz Kryo 260 Gold & 4x1.8 GHz Kryo 260 Silver)",
+        "32GB 3GB RAM, 64GB 4GB RAM, 64GB 6GB RAM, 128GB 4GB RAM",
+        "48 MP, 12 MP",
+        "13 MP"
+      ]
+    },
+    {
+      "name": "Xiaomi Poco M3",
+      "image": "../Images/Mobiles/xiaomi/xiaomi-pocom3.jpg",
+      "mainPrice": "179",
+      "off": "false",
+      "discount": "179",
+      "discountDays": "0",
+      "new": "true",
+      "top": "false",
+      "specs": [
+        "1080 x 2340 pixels, 19.5:9 ratio (~395 ppi density)",
+        "Android 10, MIUI 12",
+        "Octa-core (4x2.0 GHz Kryo 260 Gold & 4x1.8 GHz Kryo 260 Silver)",
+        "64GB 4GB RAM, 64GB 6GB RAM, 128GB 4GB RAM, 128GB 6GB RAM",
+        "48 MP, 2 MP, 2 MP",
+        "8 MP"
+      ]
+    }
+  ]
+}

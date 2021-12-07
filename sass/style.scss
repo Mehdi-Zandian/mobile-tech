@@ -1,0 +1,53 @@
+// Fonts
+// EB Garamond :
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+// Roboto :
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+// imorting sass files
+@import "variable";
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $lightDark;
+  overflow-x: hidden;
+  transition: all 1s ease;
+}
+
+.outter-container {
+  width: 100vw;
+  margin: 0 auto;
+  padding: 0;
+}
+
+// imorting sass files --------------------------------
+@import "header";
+@import "mainSliders";
+@import "mainParts";
+@import "aboutPhones";
+@import "compare";
+@import "aboutMe";
+@import "comingSoon";
+@import "footer";
+
+// Media queries --------------------------------
+@media (max-width: 1110px) {
+  .outter-container {
+    pointer-events: visible;
+  }
+}
+
+@media (max-width: 900px) {
+  .outter-container {
+    pointer-events: visible;
+  }
+}

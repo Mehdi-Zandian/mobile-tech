@@ -1,0 +1,66 @@
+.outter-coming-soon-container {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: $lightDark;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .coming-soon {
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-family: "Roboto";
+      color: $white;
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+
+    .countdown {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      color: $white;
+      font-family: "Roboto";
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .day,
+      .hour,
+      .minute,
+      .second {
+        font-size: 1.5em;
+      }
+    }
+
+    img {
+      width: 30vw;
+      margin-top: 2em;
+    }
+  }
+}
+
+// queries
+@media (max-width: 600px) {
+  .outter-coming-soon-container {
+    .coming-soon {
+      h1 {
+        font-size: 1.5em;
+      }
+
+      img {
+        width: 60vw;
+      }
+    }
+  }
+}

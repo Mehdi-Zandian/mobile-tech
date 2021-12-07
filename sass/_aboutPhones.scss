@@ -1,0 +1,968 @@
+// shared style for headers of info
+%headers-of-info {
+  width: 100%;
+  margin-bottom: 1em;
+  border-bottom: 1px solid $white;
+
+  span {
+    display: inline-block;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: $white;
+    font-family: "Roboto";
+    padding: 0.5em 0;
+    text-align: center;
+  }
+}
+
+// shared style for table of prices
+%table-of-prices {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  margin-bottom: 1em;
+
+  div {
+    box-shadow: 0 0 10px $heavyDark;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 32%;
+    border: 1px solid $heavyDark;
+    background-color: lighten($heavyDark, 50%);
+    padding: 0.5em;
+
+    h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.5em;
+      margin-bottom: 0.3em;
+    }
+
+    span {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1em;
+    }
+  }
+
+  .gig-monthly:not(.active-gig-month):hover {
+    outline: 2px solid $white;
+  }
+
+  .gig-full:not(.active-gig-full):hover {
+    outline: 2px solid $white;
+  }
+
+  .active-gig-month {
+    border-width: 2px;
+    border-top: 3px solid $orange;
+  }
+
+  .active-gig-full {
+    border-width: 2px;
+    border-top: 3px solid $orange;
+  }
+}
+
+.about-phones-outter-container {
+  width: 100%;
+
+  main {
+    width: 100%;
+
+    .product-intro-container {
+      display: block;
+      width: 95%;
+      margin: 2em auto 5em auto;
+      padding: 0.5em;
+
+      .pagination {
+        margin-bottom: 1.5em;
+
+        a {
+          font-size: 1em;
+          font-family: "Roboto";
+          color: darken($white, 15%);
+          text-decoration: none;
+          margin-right: 0.3em;
+          cursor: pointer;
+        }
+      }
+
+      .phone-name-bold {
+        font-size: 2em;
+        font-family: "Roboto";
+        color: $white;
+        margin-bottom: 0.5em;
+        cursor: default;
+        text-shadow: 0 0 10px #000;
+      }
+
+      .star-point {
+        display: flex;
+        align-items: center;
+
+        .stars-of-phone {
+          margin-right: 0.5em;
+          font-size: 0.9em;
+          text-decoration: none;
+          i {
+            margin-right: 0.3em;
+            color: $white;
+          }
+        }
+
+        .reviews-number {
+          font-size: 1em;
+          color: $white;
+          font-family: Arial, Helvetica, sans-serif;
+          transition: color 0.3s;
+        }
+
+        .reviews-number:hover {
+          color: $lightBlue;
+        }
+      }
+
+      .slider-info-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .phone-slider-container {
+          position: relative;
+          width: 100%;
+
+          .phone-images-wrapper {
+            margin: 2em auto;
+            max-width: 422px;
+            width: 50%;
+            border-radius: 15px;
+            box-shadow: 0 0 10px $heavyDark;
+            overflow: hidden;
+
+            .images-container {
+              display: flex;
+              width: 100%;
+
+              .phone-image {
+                background-color: #fff;
+                padding: 20px 0;
+                min-width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                  display: block;
+                  margin: auto;
+                }
+              }
+            }
+          }
+
+          .prev-phone,
+          .next-phone {
+            cursor: pointer;
+            position: absolute;
+            top: 13%;
+            font-size: 3em;
+            padding: 0 0.2em;
+            border: none;
+            height: 400px;
+            color: #c1e6ff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #040404;
+            background-color: #161616;
+            transition: all 0.4s;
+            outline: none;
+          }
+
+          .prev-phone:hover,
+          .next-phone:hover {
+            text-shadow: 0 0 10px $white;
+          }
+
+          .prev-phone {
+            left: 10%;
+          }
+
+          .next-phone {
+            right: 10%;
+          }
+
+          .deactive-phone-btn {
+            pointer-events: none;
+            opacity: 0.5;
+          }
+        }
+
+        .phone-info-container {
+          display: flex;
+          flex-flow: wrap column;
+          width: 50%;
+
+          .customize {
+            margin-bottom: 1.5em;
+
+            .header-customize {
+              @extend %headers-of-info;
+            }
+
+            .customize-color {
+              display: flex;
+              flex-flow: wrap row;
+
+              .color-container {
+                cursor: pointer;
+                margin-right: 1.5em;
+                display: flex;
+                flex-flow: wrap column;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                  font-family: Arial, Helvetica, sans-serif;
+                  color: $white;
+                  transition: text-shadow 0.3s;
+                }
+
+                .colors {
+                  margin-bottom: 0.5em;
+                  position: relative;
+                  width: 30px;
+                  height: 30px;
+                  border-radius: 50%;
+                  opacity: 1;
+                  border: 2px solid;
+                  transition: all 0.3s;
+                }
+
+                .purple {
+                  background-color: rgb(194, 185, 240);
+                }
+
+                .blue {
+                  background-color: rgb(0, 58, 112);
+                }
+
+                .black {
+                  background-color: rgb(0, 0, 0);
+                }
+
+                .white {
+                  background-color: rgb(249, 248, 243);
+                }
+
+                .active-color {
+                  border: 3px solid $white;
+                }
+              }
+
+              .color-container:hover {
+                text-shadow: 0 0 8px $white;
+              }
+            }
+          }
+
+          .shopping-ways {
+            min-height: 315px;
+            height: 315px;
+            margin-bottom: 1.5em;
+
+            .header-shopping-ways {
+              @extend %headers-of-info;
+
+              span {
+                font-size: 1.1em;
+                cursor: pointer;
+                margin-right: 1em;
+              }
+
+              span:not(.active-shopping-way):hover {
+                border-bottom: 2px solid darken($white, 15%);
+              }
+
+              .active-shopping-way {
+                border-bottom: 2px solid $orange;
+              }
+            }
+
+            .monthly-pay-container {
+              width: 100%;
+              margin-bottom: 0.5em;
+              display: block;
+              visibility: visible;
+              opacity: 1;
+              transition: all 0.5s;
+
+              .table-of-conditions {
+                @extend %table-of-prices;
+              }
+
+              .notice-for-shopping-ways {
+                font-family: Arial, Helvetica, sans-serif;
+                color: $white;
+                line-height: 1.5;
+                font-size: 1em;
+                margin-bottom: 1em;
+              }
+            }
+
+            .full-pay-container {
+              width: 100%;
+              margin-bottom: 0.5em;
+              visibility: visible;
+              opacity: 1;
+              transition: all 0.5s;
+
+              .table-of-full-price {
+                @extend %table-of-prices;
+              }
+
+              .notice-full-price {
+                font-family: Arial, Helvetica, sans-serif;
+                color: $white;
+                font-size: 1em;
+                line-height: 1.5;
+                margin-bottom: 1em;
+              }
+            }
+
+            .hide-price {
+              display: none;
+              visibility: hidden;
+              opacity: 0;
+            }
+
+            .continue-buying {
+              text-align: center;
+              cursor: pointer;
+              padding: 0.5em 3em;
+              font-family: "Roboto";
+              font-size: 1.2em;
+              border-radius: 20px;
+              border: none;
+              color: $white;
+              transition: all 0.3s;
+              background-color: #000;
+            }
+
+            .continue-buying:hover {
+              color: $orange;
+              transform: scale(103%, 103%);
+            }
+          }
+
+          .get-it-fast {
+            .header-get-it-fast {
+              @extend %headers-of-info;
+            }
+
+            .get-it-fast-container {
+              display: flex;
+              flex-flow: wrap column;
+
+              span {
+                cursor: default;
+                display: flex;
+                padding: 0.5em;
+                border-radius: 10px;
+                align-items: center;
+                font-family: Arial, Helvetica, sans-serif;
+                color: $white;
+                margin-bottom: 1em;
+
+                img {
+                  transition: background-color 0.3s;
+                  background-color: $white;
+                  padding: 0.2em;
+                  border-radius: 30%;
+                  margin-right: 0.5em;
+                  width: 40px;
+                }
+              }
+
+              span:not(:first-child) {
+                box-shadow: 0 0 10px #111;
+              }
+
+              span:hover img {
+                background-color: $skyBlue;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .product-specs-container {
+      display: block;
+      width: 95%;
+      margin: auto;
+      border-top: 2px solid $white;
+
+      .header-of-specs {
+        width: 90%;
+        margin: 1em auto 3em auto;
+        text-align: center;
+        font-family: "Roboto";
+        color: $white;
+        border-radius: 15px;
+        background-color: $lightBlue;
+        font-size: 1em;
+        padding: 0.5em 1.2em;
+        cursor: default;
+        transition: all 0.3s;
+        box-shadow: 0 0 10px $heavyDark inset;
+
+        i {
+          transition: color 0.3s;
+          margin-right: 0.5em;
+        }
+
+        &:hover i {
+          color: darken($lightBlue, 30%);
+        }
+      }
+
+      .specs-tables-container {
+        margin-bottom: 2em;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        background-color: darken($lightDark, 5%);
+        border-radius: 5px;
+        padding-bottom: 1em;
+        position: relative;
+
+        .btn-view {
+          position: absolute;
+          top: 1%;
+          border: none;
+          color: $white;
+          font-size: 1.5em;
+          background-color: darken($lightDark, 5%);
+          cursor: pointer;
+          transition: color 0.3s;
+        }
+
+        .list-view {
+          right: 3%;
+
+          i {
+            color: #4a9eec;
+          }
+        }
+
+        .table-view {
+          right: 6%;
+        }
+
+        .table {
+          margin: 0.5em 2em;
+
+          .header-of-tables {
+            font-family: "Roboto";
+            color: $white;
+            font-size: 2em;
+            padding: 0.5em 0;
+          }
+
+          .items-of-tables-container {
+            background-color: $heavyDark;
+            color: $white;
+            border-radius: 2px 2px 12px 12px;
+            border-top: 2px solid $white;
+            transition: all 0.3s;
+
+            .items-of-table {
+              display: flex;
+              align-items: center;
+              padding: 1em;
+              transition: all 0.3s;
+
+              &:not(:last-child) {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+              }
+
+              h1 {
+                width: 25%;
+                padding: 1em 0;
+                font-family: "Roboto";
+                font-size: 1.2em;
+                text-align: left;
+              }
+
+              p {
+                width: 75%;
+                font-family: Arial, Helvetica, sans-serif;
+                line-height: 1.5;
+                text-align: left;
+                padding: 1em 0 1em 2em;
+                font-size: 1em;
+              }
+
+              &:hover {
+                box-shadow: 0 0 15px $heavyDark inset;
+                background-color: lighten($heavyDark, 5%);
+              }
+            }
+
+            &:hover {
+              box-shadow: 0 0 20px $heavyDark;
+            }
+
+            .table:hover .items-of-table:last-child,
+            .items-of-table:last-child:hover {
+              border-radius: 0 0 12px 12px;
+            }
+          }
+        }
+      }
+
+      .list-view-active {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .details-of-phone {
+        margin: 5em 0;
+        display: block;
+        width: 50%;
+        color: $white;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+        text-align: left;
+        font-size: 0.9em;
+
+        .bold {
+          font-weight: bold;
+          columns: #fff;
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+}
+
+.loader-shadow {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 300;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.3s;
+
+  .loading-content {
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    span {
+      font-size: 1.5em;
+      font-family: "Roboto";
+      color: $white;
+    }
+
+    img {
+      margin-top: 10px;
+      border-radius: 10px;
+      width: 10%;
+    }
+  }
+}
+
+.loader-shadow-hidden {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media (max-width: 1128px) {
+  .about-phones-outter-container {
+    main {
+      .product-intro-container {
+        .slider-info-container {
+          .phone-slider-container {
+            .phone-images-wrapper {
+              .images-container {
+                .phone-image {
+                  img {
+                    width: 300px;
+                  }
+                }
+              }
+            }
+
+            .prev-phone,
+            .next-phone {
+              background-color: transparent;
+              box-shadow: none;
+              color: $white;
+              opacity: 1;
+            }
+
+            .prev-phone:hover,
+            .next-phone:hover {
+              text-shadow: 0 0 10px $heavyDark;
+            }
+
+            .deactive-phone-btn {
+              opacity: 0.2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-phones-outter-container {
+    main {
+      .product-intro-container {
+        .slider-info-container {
+          .phone-slider-container {
+            width: 70%;
+
+            .phone-images-wrapper {
+              width: 100%;
+
+              .images-container {
+                width: 100%;
+
+                .phone-image {
+                  display: flex;
+                  align-items: center;
+
+                  img {
+                    width: 250px;
+                  }
+                }
+              }
+            }
+
+            .prev-phone,
+            .next-phone {
+              top: 25%;
+              height: 100px;
+              font-size: 2em;
+              color: $heavyDark;
+            }
+
+            .prev-phone {
+              left: 14%;
+            }
+            .next-phone {
+              right: 14%;
+            }
+
+            .prev-phone:hover,
+            .next-phone:hover {
+              opacity: 1;
+            }
+
+            .deactive-phone-btn {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .table-view {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .about-phones-outter-container {
+    main {
+      .product-intro-container {
+        .slider-info-container {
+          .phone-slider-container {
+            width: 50%;
+            margin-right: 1em;
+
+            .phone-images-wrapper {
+              width: 100%;
+
+              .images-container {
+                width: 100%;
+
+                .phone-image {
+                  min-width: 100%;
+
+                  img {
+                    width: 200px;
+                  }
+                }
+              }
+            }
+
+            .prev-phone,
+            .next-phone {
+              top: 20%;
+              height: 50px;
+              font-size: 2em;
+            }
+
+            .prev-phone {
+              left: 5%;
+            }
+            .next-phone {
+              right: 5%;
+            }
+          }
+
+          .phone-info-container {
+            .customize {
+              .header-customize {
+                font-size: 0.9em;
+              }
+              .customize-color {
+                .color-container {
+                  .colors {
+                    margin-top: 15px;
+                  }
+                }
+              }
+            }
+
+            .shopping-ways {
+              height: 441px;
+
+              .header-shopping-ways {
+                font-size: 0.9em;
+              }
+
+              .monthly-pay-container {
+                .table-of-conditions {
+                  justify-content: space-between;
+
+                  div {
+                    font-size: 0.8em;
+                  }
+
+                  div:not(:last-child) {
+                    width: 45%;
+                  }
+
+                  div:nth-child(3) {
+                    width: 100%;
+                    margin: 20px 0;
+                    text-align: center;
+                  }
+                }
+              }
+
+              .full-pay-container {
+                .table-of-full-price {
+                  justify-content: space-between;
+
+                  div {
+                    font-size: 0.8em;
+                  }
+
+                  div:not(:last-child) {
+                    width: 45%;
+                  }
+
+                  div:nth-child(3) {
+                    width: 100%;
+                    margin: 20px 0;
+                    text-align: center;
+                  }
+                }
+              }
+            }
+
+            .get-it-fast {
+              .header-get-it-fast {
+                font-size: 0.9em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .loader-shadow {
+    .loading-content {
+      img {
+        width: 20%;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .about-phones-outter-container {
+    main {
+      .product-intro-container {
+        .slider-info-container {
+          flex-flow: wrap column;
+
+          .phone-slider-container {
+            width: 100%;
+
+            .phone-images-wrapper {
+              .images-container {
+                .phone-image {
+                  img {
+                    width: 250px;
+                  }
+                }
+              }
+            }
+
+            .prev-phone,
+            .next-phone {
+              top: 75%;
+              height: 100px;
+              font-size: 2em;
+            }
+
+            .prev-phone {
+              left: 13%;
+            }
+
+            .next-phone {
+              right: 13%;
+            }
+          }
+
+          .phone-info-container {
+            width: 100%;
+
+            .shopping-ways {
+              .continue-buying {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      .product-specs-container {
+        width: 100%;
+
+        .header-of-specs {
+          font-size: 0.6em;
+          padding: 0.5em;
+        }
+
+        .specs-tables-container {
+          width: 100%;
+
+          .table {
+            margin: 0.5em;
+
+            .header-of-tables {
+              font-size: 1.5em;
+            }
+
+            .items-of-tables-container {
+              .items-of-table {
+                h1 {
+                  font-size: 1em;
+                }
+
+                p {
+                  font-size: 0.8em;
+                }
+              }
+            }
+          }
+        }
+
+        .details-of-phone {
+          width: 90%;
+          margin: 2em auto;
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+
+  .loader-shadow {
+    .loading-content {
+      img {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .about-phones-outter-container {
+    main {
+      .product-intro-container {
+        .pagination {
+          a {
+            font-size: 0.8em;
+          }
+        }
+
+        .phone-name-bold {
+          font-size: 1.5em;
+        }
+
+        .star-point {
+          .stars-of-phone {
+            font-size: 0.6em;
+          }
+
+          .reviews-number {
+            font-size: 0.8em;
+          }
+        }
+
+        .slider-info-container {
+          .phone-slider-container {
+            .phone-images-wrapper {
+              .images-container {
+                .phone-image {
+                  img {
+                    width: 130px;
+                  }
+                }
+              }
+            }
+
+            .prev-phone,
+            .next-phone {
+              top: 33%;
+              height: 100px;
+              font-size: 2em;
+            }
+
+            .prev-phone {
+              left: 3%;
+            }
+
+            .next-phone {
+              right: 3%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

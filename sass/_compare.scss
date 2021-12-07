@@ -1,0 +1,367 @@
+%first-and-second-phones {
+  .header-of-column {
+    margin: 2em 0;
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    width: 100%;
+
+    label {
+      margin-bottom: 1.5em;
+
+      input[type="search"] {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        color: $heavyDark;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 5px $heavyDark inset;
+        outline: none;
+        padding: 0.3em 0.5em 0.3em 1em;
+        outline: none;
+      }
+
+      input[type="button"] {
+        font-family: "Roboto";
+        font-size: 0.8em;
+        padding: 0.5em;
+        border-radius: 10px;
+        border: 1px solid $white;
+        background-color: $heavyDark;
+        color: $white;
+        margin-left: 0.5em;
+        cursor: pointer;
+        transition: all 0.3s;
+        outline: none;
+
+        &:hover {
+          background-color: $white;
+          color: $heavyDark;
+          border-color: $heavyDark;
+        }
+      }
+
+      span {
+        margin-top: 0.5em;
+        font-family: Arial, Helvetica, sans-serif;
+        color: darken($white, 5%);
+        font-style: italic;
+        opacity: 0.5;
+        font-size: 0.9em;
+      }
+    }
+
+    .phone-card-photo {
+      background-color: lighten($heavyDark, 7%);
+      display: flex;
+      flex-flow: wrap column;
+      padding: 1em;
+      border-radius: 10px;
+
+      .name-of-phone {
+        cursor: pointer;
+        margin: 0 auto 1em auto;
+        font-family: "Roboto";
+        font-size: 1.2em;
+        color: $white;
+        text-transform: uppercase;
+        text-shadow: 0 0 2px $white;
+        background-color: $heavyDark;
+        text-align: center;
+        padding: 0.3em;
+        border-radius: 5px;
+        width: 95%;
+        transition: color 0.3s, text-shadow 0.3s;
+
+        &:hover {
+          color: lighten($orange, 10%);
+          text-shadow: none;
+        }
+      }
+
+      .photo-container {
+        width: 95%;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 0 auto 1em auto;
+        height: 207px;
+        display: flex;
+        align-items: center;
+
+        img {
+          display: block;
+          margin: auto;
+          width: 35%;
+          min-width: 134px;
+          min-height: 150px;
+        }
+      }
+
+      .photo-info-container {
+        display: flex;
+        justify-content: space-between;
+
+        .add-to-card,
+        .like-card,
+        .learn-card {
+          outline: none;
+          width: 125px;
+          background-color: $orange;
+          border-radius: 5px;
+          transition: all 0.3s;
+          cursor: pointer;
+          text-align: left;
+          margin: 0 0.5em;
+
+          i {
+            text-align: center;
+            padding: 5px;
+            font-size: 1em;
+            margin-right: 0.2em;
+            color: darken($white, 5%);
+          }
+
+          span {
+            color: $white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.8em;
+            text-align: left;
+          }
+
+          &:hover {
+            background-color: darken($orange, 10%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.outter-compare-container {
+  width: 100%;
+
+  main {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+
+    .first-phone-container {
+      width: 50%;
+      background-color: lighten($lightDark, 5%);
+      transition: box-shadow 0.3s;
+
+      @extend %first-and-second-phones;
+
+      &:hover {
+        box-shadow: 0 0 10px $heavyDark inset;
+      }
+    }
+
+    .second-phone-container {
+      width: 50%;
+      background-color: darken($lightDark, 14%);
+      transition: box-shadow 0.3s;
+
+      @extend %first-and-second-phones;
+
+      &:hover {
+        box-shadow: 0 0 10px $lightDark inset;
+      }
+    }
+
+    .table-container {
+      width: 95%;
+      margin: 3em auto;
+      border-top: 3px solid $white;
+
+      table,
+      tr,
+      td,
+      th {
+        border: 1px solid $white;
+        border-collapse: collapse;
+      }
+
+      table {
+        width: 100%;
+        margin-top: 2em;
+        color: $white;
+        background-color: $heavyDark;
+        cursor: default;
+
+        td,
+        th {
+          text-align: left;
+        }
+
+        th {
+          padding: 0.8em;
+          color: $orange;
+          font-family: "Roboto";
+          font-size: 1.3em;
+          background-color: darken($lightDark, 14%);
+          transition: all 0.3s;
+
+          &:hover {
+            color: darken($orange, 20%);
+            box-shadow: 0 0 7px lighten($lightDark, 10%) inset;
+          }
+        }
+
+        td {
+          padding: 1em;
+          font-family: Arial, Helvetica, sans-serif;
+          line-height: 1.5;
+          font-size: 1em;
+          transition: all 0.3s;
+
+          &:hover {
+            background-color: darken($lightDark, 5%);
+            box-shadow: 0 0 10px $heavyDark inset;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .outter-compare-container {
+    main {
+      display: flex;
+      flex-flow: wrap column;
+      align-items: center;
+
+      .first-phone-container,
+      .second-phone-container {
+        width: 90%;
+        border-radius: 10px;
+
+        .header-of-column {
+          margin-top: 1em;
+
+          label {
+            input[type="search"] {
+              font-size: 0.8em;
+              padding: 0.3em 0.3em 0.3em 0.8em;
+            }
+
+            input[type="button"] {
+              font-size: 0.7em;
+              padding: 0.4em;
+            }
+
+            span {
+              font-size: 0.8em;
+            }
+          }
+
+          .phone-card-photo {
+            .name-of-phone {
+              font-size: 1em;
+            }
+
+            .photo-container {
+              img {
+                width: 30%;
+                min-width: 125px;
+                min-height: 140px;
+              }
+            }
+          }
+        }
+      }
+
+      .second-phone-container {
+        margin: 2em 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .outter-compare-container {
+    main {
+      .first-phone-container,
+      .second-phone-container {
+        margin-top: 2em;
+        background-color: lighten($heavyDark, 10%);
+
+        .header-of-column {
+          .phone-card-photo {
+            width: 100%;
+            display: flex;
+            flex-flow: wrap column;
+            padding: 0.5em 0;
+
+            .photo-info-container {
+              .add-to-card,
+              .like-card,
+              .learn-card {
+                margin: 0 0.3em;
+                width: 100px;
+
+                i {
+                  font-size: 0.8em;
+                }
+
+                span {
+                  font-size: 0.8em;
+                }
+              }
+            }
+          }
+        }
+
+        &:hover {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .outter-compare-container {
+    main {
+      .first-phone-container,
+      .second-phone-container {
+        .header-of-column {
+          .phone-card-photo {
+            .photo-info-container {
+              display: flex;
+              flex-flow: wrap column;
+              align-items: center;
+
+              .add-to-card,
+              .like-card,
+              .learn-card {
+                margin-top: 0.2em;
+                width: 90%;
+              }
+            }
+          }
+        }
+      }
+
+      .table-container {
+        table {
+          overflow-x: auto;
+
+          th {
+            padding: 0.5em;
+            font-size: 1em;
+          }
+
+          td {
+            padding: 0.7em;
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+  }
+}

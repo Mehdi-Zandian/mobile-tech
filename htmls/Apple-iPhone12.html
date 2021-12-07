@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="../libraries/Hover-master/css/hover-min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <title>About Phone</title>
+  </head>
+
+  <body>
+    <!-- Sticky header -->
+    <header>
+      <div class="burger">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+      </div>
+
+      <div class="store">
+        <img src="../Images/Logo/Logo.png" alt="Logo" />
+        <h1><a href="../index.html">MOBILE TECH</a></h1>
+      </div>
+
+      <ul class="brands-container">
+        <li class="hvr-underline-from-left">
+          <a href="../htmls/otherBrands.html">Samsung</a>
+        </li>
+        <li class="hvr-underline-from-left">
+          <a href="../htmls/otherBrands.html">iPhone</a>
+        </li>
+        <li class="hvr-underline-from-left">
+          <a href="../htmls/otherBrands.html">Xiaomi</a>
+        </li>
+        <li class="hvr-underline-from-left">
+          <a href="../htmls/otherBrands.html">Other brands</a>
+        </li>
+      </ul>
+
+      <ul class="right-side-header">
+        <li class="hvr-underline-from-left">
+          <a href="../index.html">Home</a>
+        </li>
+
+        <li class="hvr-underline-from-left" id="divide">
+          <a href="../htmls/about.html">About</a>
+        </li>
+
+        <li>
+          <a href="#" class="hvr-icon-float" id="search-box">
+            <i class="fa fa-search hvr-icon"></i>
+          </a>
+        </li>
+
+        <li class="shopping-card-container">
+          <a href="#" class="hvr-icon-float shopping-icon">
+            <i class="fa fa-shopping-cart hvr-icon"></i>
+          </a>
+
+          <div class="shopping-card">
+            <table class="added-phones">
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>remove</th>
+              </tr>
+            </table>
+          </div>
+        </li>
+
+        <li>
+          <a href="#" class="hvr-icon-float login-icon"
+            ><i class="fa fa-user hvr-icon"></i>
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <!-- side nav -->
+    <div class="side-nav-container">
+      <div class="inner-burger">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+      </div>
+
+      <div class="header">
+        <img src="../Images/Logo/Logo.png" alt="Logo" />
+
+        <h1><a href="../index.html">MOBILE TECH</a></h1>
+      </div>
+
+      <h1 class="looking-brands">Looking for other brands ?</h1>
+
+      <div class="items-container">
+        <li class="hvr-underline-from-left">
+          <a href="../htmls/otherBrands.html">Samsung</a>
+        </li>
+        <li class="hvr-underline-from-left">
+          <a href="../htmls/otherBrands.html">iPhone</a>
+        </li>
+        <li class="hvr-underline-from-left">
+          <a href="../htmls/otherBrands.html">Xiaomi</a>
+        </li>
+        <li class="hvr-underline-from-left active-item">
+          <a href="../htmls/otherBrands.html">Other brands</a>
+        </li>
+      </div>
+
+      <h1 class="shortcuts-tools">Shotrcuts and Tools</h1>
+
+      <div class="items-container">
+        <li class="hvr-underline-from-left">
+          <a href="../htmls/otherBrands.html">New Release</a>
+        </li>
+
+        <li class="hvr-underline-from-left">
+          <a href="../htmls/otherBrands.html">Top Selling</a>
+        </li>
+
+        <li class="hvr-underline-from-left active-item">
+          <a href="../htmls/compare.html">Compare</a>
+        </li>
+      </div>
+
+      <div class="home-about-side">
+        <a href="../index.html">Home</a>
+        <a href="../htmls/about.html">About</a>
+      </div>
+    </div>
+
+    <!-- scroll indicator -->
+    <div class="scroll-indicator"></div>
+    <!-- Sticky header -->
+
+    <!-- Wrapper container (Main) -->
+    <div class="about-phones-outter-container">
+      <main>
+        <!-- this is the intro information ofproduct -->
+        <div class="product-intro-container">
+          <div class="pagination">
+            <a href="#">Home > </a>
+            <a href="#">OtherBrands > </a>
+            <a href="#">Apple > </a>
+            <a href="#">iPhone 12</a>
+          </div>
+
+          <h1 class="phone-name-bold">Apple iPhone 12</h1>
+
+          <div class="star-point">
+            <a href="#" class="stars-of-phone">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </a>
+            <a href="#" class="reviews-number">84 Reviews</a>
+          </div>
+
+          <div class="slider-info-container">
+            <div class="phone-slider-container">
+              <!-- because of having multiple colors we generate the img tags by JS -->
+              <div class="phone-images-wrapper">
+                <div class="images-container"></div>
+              </div>
+
+              <button class="prev-phone deactive-phone-btn hvr-icon-bob">
+                <i class="fas fa-arrow-left hvr-icon"></i>
+              </button>
+
+              <button class="next-phone hvr-icon-bob">
+                <i class="fas fa-arrow-right hvr-icon"></i>
+              </button>
+            </div>
+
+            <div class="phone-info-container">
+              <div class="customize">
+                <div class="header-customize">
+                  <span>Customize</span>
+                </div>
+
+                <div class="customize-color">
+                  <div class="color-container">
+                    <div class="colors purple active-color"></div>
+                    <span>Purple</span>
+                  </div>
+
+                  <div class="color-container">
+                    <div class="colors blue"></div>
+                    <span>Blue</span>
+                  </div>
+
+                  <div class="color-container">
+                    <div class="colors black"></div>
+                    <span>Black</span>
+                  </div>
+
+                  <div class="color-container">
+                    <div class="colors white"></div>
+                    <span>White</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="shopping-ways">
+                <div class="header-shopping-ways">
+                  <span class="monthly-pay active-shopping-way">24 months</span>
+                  <span class="full-pay">Full retail price</span>
+                </div>
+
+                <div class="monthly-pay-container">
+                  <div class="table-of-conditions">
+                    <div class="gig-monthly gig-64 active-gig-month">
+                      <h1>64 GB</h1>
+                      <span>$33.33/mo</span>
+                    </div>
+
+                    <div class="gig-monthly gig-128">
+                      <h1>128 GB</h1>
+                      <span>$35.41/mo</span>
+                    </div>
+
+                    <div class="gig-monthly gig-256">
+                      <h1>256 GB</h1>
+                      <span>$39.58/mo</span>
+                    </div>
+                  </div>
+
+                  <p class="notice-for-shopping-ways">
+                    Monthly payments shown are for customers who qualify to pay
+                    $0 Down, $33.33/mo for 24 months; 0% APR. Retail Price:
+                    $799.99. One-time activation fee of $35. Device unlocking
+                    policy
+                  </p>
+
+                  <button class="continue-buying">Continue</button>
+                </div>
+
+                <div class="full-pay-container hide-price">
+                  <div class="table-of-full-price">
+                    <div class="gig-full gig-64 active-gig-full">
+                      <h1>64 GB</h1>
+                      <span>$829.99</span>
+                    </div>
+
+                    <div class="gig-full gig-128">
+                      <h1>128 GB</h1>
+                      <span>$889.99</span>
+                    </div>
+
+                    <div class="gig-full gig-256">
+                      <h1>256 GB</h1>
+                      <span>$989.99</span>
+                    </div>
+                  </div>
+
+                  <p class="notice-full-price">
+                    One-time activation fee of $35. Device unlocking policy
+                  </p>
+
+                  <button class="continue-buying">Continue</button>
+                </div>
+              </div>
+
+              <div class="get-it-fast">
+                <div class="header-get-it-fast">
+                  <span>Get it fast</span>
+                </div>
+
+                <div class="get-it-fast-container">
+                  <span>
+                    Select shipping options at checkout. Subject to eligibility.
+                  </span>
+
+                  <span>
+                    <img src="../Images/Svg/get-it-svg/big-box.svg" alt="" />
+                    Free 2-Day Shipping
+                  </span>
+
+                  <span>
+                    <img
+                      src="../Images/Svg/get-it-svg/shopping-bag.svg"
+                      alt=""
+                    />
+                    Free In-Store Pickup
+                  </span>
+
+                  <span>
+                    <img
+                      src="../Images/Svg/get-it-svg/delivery-truck.svg"
+                      alt=""
+                    />
+                    Same Day Delivery
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-specs-container">
+          <div class="header-of-specs">
+            <h1><i class="fas fa-info-circle"></i>Features & Specs</h1>
+          </div>
+
+          <div class="specs-tables-container list-view-active">
+            <button class="table-view btn-view" title="Table View">
+              <i class="fas fa-table"></i>
+            </button>
+            <button class="list-view btn-view" title="List View">
+              <i class="fas fa-th-list"></i>
+            </button>
+
+            <div class="table design">
+              <h1 class="header-of-tables">Design</h1>
+
+              <div class="items-of-tables-container">
+                <div class="items-of-table">
+                  <h1>Colors</h1>
+
+                  <p>
+                    Black, White, (PRODUCT)RED, Green or Blue (Subject to
+                    availability)
+                  </p>
+                </div>
+
+                <div class="items-of-table">
+                  <h1>Height</h1>
+
+                  <p>5.78 in</p>
+                </div>
+
+                <div class="items-of-table">
+                  <h1>Width</h1>
+
+                  <p>2.82 in</p>
+                </div>
+
+                <div class="items-of-table">
+                  <h1>Depth</h1>
+
+                  <p>0.29 in</p>
+                </div>
+
+                <div class="items-of-table">
+                  <h1>Weight</h1>
+
+                  <p>5.78 oz</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="table battery">
+              <h1 class="header-of-tables">Battery</h1>
+
+              <div class="items-of-tables-container">
+                <div class="items-of-table">
+                  <h1>Usage Time</h1>
+
+                  <p>65 hrs</p>
+                </div>
+
+                <div class="items-of-table">
+                  <h1>Battery</h1>
+
+                  <p>
+                    Built-in rechargeable lithium-ion battery, MagSafe wireless
+                    charging up to 15W, Qi wireless charging up to 7.5W
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="table network">
+              <h1 class="header-of-tables">Network</h1>
+
+              <div class="items-of-tables-container">
+                <div class="items-of-table">
+                  <h1>Network</h1>
+
+                  <p>
+                    FDD-LTE (Bands 1, 2, 3, 4, 5, 7, 8, 12, 13, 14, 17, 18, 19,
+                    20, 25, 26, 28, 29, 30, 32, 66, 71) TD-LTE (Bands
+                    34,38,39,40,41,42,46,48) CDMA EV-DO Rev. A (800,1900 MHz)
+                    UMTS/HSPA+/DC-HSDPA (850,900,1700/2100,1900,2100 MHz)
+                    GSM/EDGE (850,900,1800,1900 MHz)
+                  </p>
+                </div>
+
+                <div class="items-of-table">
+                  <h1>World Device</h1>
+
+                  <p>Works in over 200 countries depending on your plan.</p>
+                </div>
+
+                <div class="items-of-table">
+                  <h1>5G Network</h1>
+
+                  <p>
+                    5G NR (Bands n1, n2, n3, n5, n7, n8, n12, n20, n25, n28,
+                    n38, n40, n41, n66, n71, n77, n78, n79) 5G NR mmWave (Bands
+                    n260, n261)
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="table camera">
+              <h1 class="header-of-tables">Camera</h1>
+
+              <div class="items-of-tables-container">
+                <div class="items-of-table">
+                  <h1>Front Camera</h1>
+
+                  <p>12MP</p>
+                </div>
+
+                <div class="items-of-table">
+                  <h1>Camera</h1>
+
+                  <p>Dual 12MP camera system: Ultra Wide and Wide</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="table performance">
+              <h1 class="header-of-tables">Performance</h1>
+
+              <div class="items-of-tables-container">
+                <div class="items-of-table">
+                  <h1>Storage</h1>
+
+                  <p>64GB, 128GB or 256GB (Subject to availability)</p>
+                </div>
+
+                <div class="items-of-table">
+                  <h1>Operating System</h1>
+
+                  <p>iOS 14</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="table display">
+              <h1 class="header-of-tables">Display</h1>
+
+              <div class="items-of-tables-container">
+                <div class="items-of-table">
+                  <h1>Screen</h1>
+
+                  <p>
+                    Super Retina XDR display, 6.1 inch (diagonal) all-screen
+                    OLED display, 2532-by-1170-pixel resolution at 460 ppi
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="table sku">
+              <h1 class="header-of-tables">SKU#</h1>
+
+              <div class="items-of-tables-container">
+                <div class="items-of-table">
+                  <h1>SKU#</h1>
+
+                  <p>MJN13LL/A</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <small class="details-of-phone">
+            1. Data plan required. 5G is available in select markets and through
+            select carriers. Speeds vary based on site conditions and carrier.
+            For details on 5G support, contact your carrier and see
+            apple.com/iphone/cellular. 2.
+            <span class="bold"
+              >5G Ultra Wideband available only in parts of select cities. 5G
+              Nationwide available in 2,700+ cities.
+            </span>
+            3. Claim based on iPhone 12 and iPhone 12 Pro Ceramic Shield front
+            compared with previous-generation iPhone. <br />
+            <br />
+            4. All battery claims depend on network configuration and many other
+            factors; actual results will vary. Battery has limited recharge
+            cycles and may eventually need to be replaced by Apple service
+            provider. Battery life and charge cycles vary by use and settings.
+            See apple.com/batteries and apple.com/iphone/battery.html for more
+            information. 5. Requires an Apple TV or AirPlay-enabled TV.
+          </small>
+        </div>
+      </main>
+    </div>
+    <!-- Wrapper container (Main) -->
+
+    <!--footer container -->
+    <div class="footer-container">
+      <footer>
+        <!-- logo container + explaination -->
+        <div class="footer-logo-container">
+          <img src="../Images/Logo/Logo.png" alt="Logo" />
+
+          <h1><a href="#">MOBILE TECH</a></h1>
+
+          <p>
+            Mobile Tech team, Everyday without fail are looking for service,
+            here we trying to give the qualities that you genuinely deserve.
+          </p>
+        </div>
+
+        <ul class="footer-services-container">
+          <h1>Services</h1>
+          <li><a href="#">Delivery</a></li>
+          <li class="active-footer"><a href="#">Compare</a></li>
+          <li><a href="#">User Guides</a></li>
+          <li><a href="#">Careers</a></li>
+          <li class="active-footer"><a href="#">About Us</a></li>
+        </ul>
+
+        <ul class="footer-products-container">
+          <h1>Products</h1>
+          <li class="active-footer"><a href="#go-top-sell">Top Selling</a></li>
+          <li class="active-footer">
+            <a href="#go-new-release">New Release</a>
+          </li>
+          <li class="active-footer"><a href="#">All Brands</a></li>
+          <li><a href="#">Special Gifts Terms</a></li>
+        </ul>
+
+        <ul class="footer-newsletter-container">
+          <h1>News Letter</h1>
+          <li>
+            <a href="#">Subscribe</a>
+          </li>
+          <li><a href="#">Unsubscribe</a></li>
+          <div class="social-container">
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-youtube"></a>
+          </div>
+        </ul>
+      </footer>
+
+      <!-- copy right -->
+      <address class="copy-right">
+        Copyright &#169 2021-2021 All Rights Reserved to
+        <a href="./about.html" title="The Developer of the website">Mahdi Zandian</a>
+      </address>
+    </div>
+
+    <!-- Modal parts -------------------------------------------->
+
+    <!-- search modal-box -->
+    <div class="modal-container">
+      <span class="modal-close">
+        <i class="fas fa-times"></i>
+      </span>
+      <div class="modal">
+        <h1>What are you looking for ?</h1>
+
+        <input
+          type="text"
+          placeholder="iPhone 12 pro max"
+          id="search-box-input"
+        />
+
+        <i class="fa fa-search search-icon"></i>
+
+        <span class="clear-search">
+          <i class="far fa-times-circle"></i>
+        </span>
+      </div>
+    </div>
+
+    <!-- login account modal-box -->
+    <div class="login-container">
+      <form action="#" class="login-form">
+        <span class="close-login">
+          <i class="fas fa-times"></i>
+        </span>
+        <h1>Login</h1>
+
+        <label for="username">
+          <div>Username</div>
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            class="validate"
+            id="username"
+            placeholder="type your username"
+          />
+        </label>
+
+        <label for="password">
+          <div>Password</div>
+          <i class="fas fa-lock"></i>
+          <input
+            class="validate"
+            type="password"
+            id="password"
+            placeholder="type your password"
+          />
+        </label>
+
+        <div class="forgot-password"><a href="#">Forgot password?</a></div>
+
+        <label for="submit">
+          <input type="submit" id="submit" value="Login" />
+        </label>
+
+        <div class="sign-up-options">
+          <h3>Or Login Using</h3>
+
+          <div class="logo-social-container">
+            <div class="face-book">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <div class="twitter">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+
+            <div class="google">
+              <a href="#"><i class="fab fa-google"></i></a>
+            </div>
+          </div>
+
+          <div class="signup"><a href="#">Create a new accont</a></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="loader-shadow loader-shadow-hidden">
+      <div class="loading-content">
+        <span>Loading ...</span>
+        <img src="../Images/Loader.gif" alt="" />
+      </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="../JS/objects.js"></script>
+    <script src="../JS/header.js"></script>
+    <script src="../JS/about-phone/apple-iPhone12.js"></script>
+    <!-- scripts -->
+  </body>
+</html>

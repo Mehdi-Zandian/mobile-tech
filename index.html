@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="./libraries/Hover-master/css/hover-min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link rel="icon" href="./Images/Logo/favicon.ico" />
+    
+    <title>MobileTech</title>
+  </head>
+
+  <body>
+    <!-- Sticky header -->
+    <header>
+      <div class="burger">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+      </div>
+
+      <div class="store">
+        <img src="./Images/Logo/Logo.png" alt="Logo" />
+        <h1><a href="./index.html">MOBILE TECH</a></h1>
+      </div>
+
+      <ul class="brands-container">
+        <li class="hvr-underline-from-left"><a href="./htmls/otherBrands.html">Samsung</a></li>
+        <li class="hvr-underline-from-left"><a href="./htmls/otherBrands.html">iPhone</a></li>
+        <li class="hvr-underline-from-left"><a href="./htmls/otherBrands.html">Xiaomi</a></li>
+        <li class="hvr-underline-from-left">
+          <a href="./htmls/otherBrands.html">Other brands</a>
+        </li>
+      </ul>
+
+      <ul class="right-side-header">
+        <li class="hvr-underline-from-left"><a href="./index.html">Home</a></li>
+
+        <li class="hvr-underline-from-left" id="divide">
+          <a href="./htmls/about.html">About</a>
+        </li>
+
+        <li>
+          <a href="#" class="hvr-icon-float" id="search-box">
+            <i class="fa fa-search hvr-icon"></i>
+          </a>
+        </li>
+
+        <li class="shopping-card-container">
+          <a href="#" class="hvr-icon-float shopping-icon">
+            <i class="fa fa-shopping-cart hvr-icon"></i>
+          </a>
+
+          <div class="shopping-card">
+            <table class="added-phones">
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>remove</th>
+              </tr>
+            </table>
+          </div>
+        </li>
+
+        <li>
+          <a href="#" class="hvr-icon-float login-icon"
+            ><i class="fa fa-user hvr-icon"></i>
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <!-- side nav -->
+    <div class="side-nav-container">
+      <div class="inner-burger">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+      </div>
+
+      <div class="header">
+        <img src="./Images/Logo/Logo.png" alt="Logo" />
+
+        <h1><a href="./index.html">MOBILE TECH</a></h1>
+      </div>
+
+      <h1 class="looking-brands">Looking for other brands ?</h1>
+
+      <div class="items-container">
+        <li class="hvr-underline-from-left"><a href="./htmls/otherBrands.html">Samsung</a></li>
+        <li class="hvr-underline-from-left"><a href="./htmls/otherBrands.html">iPhone</a></li>
+        <li class="hvr-underline-from-left"><a href="./htmls/otherBrands.html">Xiaomi</a></li>
+        <li class="hvr-underline-from-left active-item">
+          <a href="./htmls/otherBrands.html">Other brands</a>
+        </li>
+      </div>
+
+      <h1 class="shortcuts-tools">Shotrcuts and Tools</h1>
+
+      <div class="items-container">
+        <li class="hvr-underline-from-left">
+          <a href="#go-new-release">New Release</a>
+        </li>
+
+        <li class="hvr-underline-from-left">
+          <a href="#go-top-sell">Top Selling</a>
+        </li>
+
+        <li class="hvr-underline-from-left active-item">
+          <a href="./htmls/compare.html">Compare</a>
+        </li>
+      </div>
+
+      <div class="home-about-side">
+        <a href="./index.html">Home</a>
+        <a href="./htmls/about.html">About</a>
+      </div>
+    </div>
+
+    <!-- scroll indicator -->
+    <div class="scroll-indicator"></div>
+    <!-- Sticky header -->
+
+    <!-- Wrapper container (Main) -->
+    <div class="outter-container">
+      <!-- header container with subbanners -->
+      <div class="header-container">
+        <!-- slider show -->
+        <div class="subbanner-container">
+          <a href="#go-new-release" class="subbanner sub1 hvr-icon-grow-rotate">
+            <span>01</span>
+            <i class="fas fa-rocket hvr-icon"></i>
+            <div>New Release</div>
+            <li>See the latest phone brands</li>
+          </a>
+
+          <a href="#go-top-sell" class="subbanner sub2 hvr-icon-bob">
+            <span>02</span>
+            <i class="fab fa-hotjar hvr-icon"></i>
+            <div>Top selling</div>
+            <li>See the top selling phones</li>
+          </a>
+
+          <a href="./htmls/otherBrands.html" class="subbanner sub3 hvr-icon-rotate">
+            <span>03</span>
+            <i class="fas fa-mobile-alt hvr-icon"></i>
+            <div>Other Brands</div>
+            <li>Check out all top brands</li>
+          </a>
+
+          <a href="./htmls/compare.html" class="subbanner sub4 hvr-icon-wobble-vertical">
+            <span>04</span>
+            <i class="fas fa-search hvr-icon"></i>
+            <div>Compare</div>
+            <li>Compare specifications of phones</li>
+          </a>
+        </div>
+      </div>
+
+      <!-- main container of body has sliders and comments and .... -->
+      <div class="main-container">
+        <main>
+          <!-- new release slider container -->
+          <section id="go-new-release" class="all-products-container">
+            <!-- header of slider -->
+            <div class="header-product-container">
+              <h1>New Release</h1>
+
+              <div class="buttons-of-slider">
+                <button id="prev-new-release" class="hvr-icon-bob">
+                  <i class="fas fa-chevron-left hvr-icon"></i>
+                </button>
+
+                <button id="next-new-release" class="hvr-icon-bob">
+                  <i class="fas fa-chevron-right hvr-icon"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- slider container -->
+            <div class="product-slider-container">
+              <!-- cards container -->
+              <div class="products-container container-new-release">
+                <!-- products -->
+              </div>
+            </div>
+          </section>
+
+          <!-- fixed background with a text-->
+          <div class="bg-fixed-container">
+            <div class="big-sale">
+              <h1>OUR <span>BIGGEST</span> PHONE SALE</h1>
+              <p>Limited supplies,endless savings, save up 50% off</p>
+              <a href="./htmls/otherBrands.html" class="hvr-wobble-vertical">Let's Do This!</a>
+            </div>
+          </div>
+
+          <!-- Top selling slider container -->
+          <section id="go-top-sell" class="all-products-container">
+            <!-- header of slider -->
+            <div class="header-product-container">
+              <h1>Top selling</h1>
+
+              <div class="buttons-of-slider">
+                <button id="prev-top-sell" class="hvr-icon-bob">
+                  <i class="fas fa-chevron-left hvr-icon"></i>
+                </button>
+
+                <button id="next-top-sell" class="hvr-icon-bob">
+                  <i class="fas fa-chevron-right hvr-icon"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- slider container -->
+            <div class="product-slider-container">
+              <!-- cards container -->
+              <div class="products-container container-top-sell"></div>
+            </div>
+          </section>
+
+          <!-- user comments -->
+          <div class="comment-outter-container">
+            <button id="prev-comment" class="hvr-icon-bob">
+              <i class="fas fa-chevron-left hvr-icon"></i>
+            </button>
+
+            <button id="next-comment" class="hvr-icon-bob">
+              <i class="fas fa-chevron-right hvr-icon"></i>
+            </button>
+
+            <div class="user user1">
+              <div class="profile-photo"></div>
+
+              <section class="message-section">
+                <!-- information of comment -->
+                <div class="information-of-comment">
+                  <div class="rate">
+                    <div class="star checked">
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <div class="star">
+                      <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="star">
+                      <i class="far fa-star"></i>
+                    </div>
+
+                    <div class="star">
+                      <i class="far fa-star"></i>
+                    </div>
+                  </div>
+
+                  <span class="name-of-brand hvr-float-shadow"
+                    ><a href="#">Samsung Galaxy S20</a></span
+                  >
+
+                  <span class="date-of-comment">(Dec 24, 2020)</span>
+                </div>
+
+                <!-- message content -->
+                <q class="comment-content">
+                  got a update on my s20 +5g phone.. now half the apps do not
+                  work and the apps will not connect to Wi-Fi at all.. uninstall
+                  apps.. ..now I can not down load any apps because of the Wi-Fi
+                  will not work on google play or anything.. it's a paperweight
+                  now
+                </q>
+                <address class="name-of-user">Emma Addison</address>
+              </section>
+            </div>
+
+            <div class="user user2">
+              <div class="profile-photo"></div>
+
+              <section class="message-section">
+                <!-- information of comment -->
+                <div class="information-of-comment">
+                  <div class="rate">
+                    <div class="star checked">
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <div class="star checked">
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <div class="star checked">
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <div class="star">
+                      <i class="far fa-star"></i>
+                    </div>
+                  </div>
+
+                  <span class="name-of-brand hvr-float-shadow"
+                    ><a href="#">iPhone 11 Pro Max</a></span
+                  >
+
+                  <span class="date-of-comment">(Mar 16, 2020)</span>
+                </div>
+
+                <!-- message content -->
+                <q class="comment-content">
+                  Well iPhone 12 Pro Max and 11 pro Max shares almost same
+                  battery life but in video 11 pro Max is higher and in web
+                  browsing 12 pro Max is higher, though I feel 11 pro Max
+                  battery should last longer as it have less size, more mAh and
+                  less resolution but optimization of A14 Bionic chip and its
+                  software processing puts the 12 pro Max battery toe to toe
+                  with 11 pro Max.
+                </q>
+                <address class="name-of-user">Michael Smith</address>
+              </section>
+            </div>
+
+            <div class="user user3">
+              <div class="profile-photo"></div>
+
+              <section class="message-section">
+                <!-- information of comment -->
+                <div class="information-of-comment">
+                  <div class="rate">
+                    <div class="star checked">
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <div class="star checked">
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <div class="star checked">
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <div class="star">
+                      <i class="far fa-star"></i>
+                    </div>
+                  </div>
+
+                  <span class="name-of-brand hvr-float-shadow"
+                    ><a href="#">Xiaomi Mi 10</a></span
+                  >
+
+                  <span class="date-of-comment">(May 29, 2020)</span>
+                </div>
+
+                <!-- message content -->
+                <q class="comment-content">
+                  Excellent phone. Feels sleek and nice in my hand. Camera
+                  excellent. Everething is good, except the blutetooth. It has
+                  some compability issues. I bought myself a pair of Huawei Free
+                  buds, bluetooth headset, and it didn't work. The connection
+                  worked perfectly inside the house, but as soon as I went
+                  outside, it only worked if I held my phone under my head. It
+                  worked perfectly with every other bluetooth device I tried,
+                  but it wasn't really compatible with huawei freebuds
+                </q>
+                <address class="name-of-user">Jammir Harris</address>
+              </section>
+            </div>
+          </div>
+
+          <!-- guarantee items -->
+          <div class="guarantee-container">
+            <div class="guarantee-item free-delivery">
+              <img
+                src="./Images/Svg/Guaranteed-items/free-delivery.svg"
+                alt="free delivery"
+              />
+
+              <div class="about-guarantee-item">
+                <h1>Free Delivery</h1>
+                <span>Free delivery for orders over $699 </span>
+              </div>
+            </div>
+
+            <div class="guarantee-item special-gift">
+              <img
+                src="./Images/Svg/Guaranteed-items/special-gift.svg"
+                alt="special gift"
+              />
+
+              <div class="about-guarantee-item">
+                <h1>Special Gift</h1>
+                <span>Give the perfect gift to your loved ones</span>
+              </div>
+            </div>
+
+            <div class="guarantee-item money-back">
+              <img
+                src="./Images/Svg/Guaranteed-items/money-back.svg"
+                alt="money back"
+              />
+
+              <div class="about-guarantee-item">
+                <h1>Money Back</h1>
+                <span>Not receiving an item applied to reward</span>
+              </div>
+            </div>
+
+            <div class="guarantee-item customer-satisfaction">
+              <img
+                src="./Images/Svg/Guaranteed-items/customer-satisfaction.svg"
+                alt="customer satisfaction"
+              />
+
+              <div class="about-guarantee-item">
+                <h1>100% satisfaction</h1>
+                <span>The Best You Can Get</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- brands slider -->
+          <div class="brands-outter-container">
+            <div class="brands-slider-container">
+              <a href="#" class="brands huawei-brand-card" id="first-brand">
+                <img
+                  src="./Images/Logo/mobile-brands/Huawei.png"
+                  alt="huawei brand"
+                />
+              </a>
+
+              <a href="#" class="brands samsung-brand-card">
+                <img
+                  src="./Images/Logo/mobile-brands/Samsung.png"
+                  alt="samsung brand"
+                />
+              </a>
+
+              <a href="#" class="brands iphone-brand-card">
+                <img
+                  src="./Images/Logo/mobile-brands/iPhone.png"
+                  alt="iphone brands"
+                />
+              </a>
+
+              <a href="#" class="brands xiaomi-brand-card">
+                <img
+                  src="./Images/Logo/mobile-brands/Xiaomi.png"
+                  alt="xiaomi brands"
+                />
+              </a>
+
+              <a href="#" class="brands oppo-brand-card">
+                <img
+                  src="./Images/Logo/mobile-brands/Oppo.png"
+                  alt="oppo brand"
+                />
+              </a>
+
+              <a href="#" class="brands nokia-brand-card">
+                <img
+                  src="./Images/Logo/mobile-brands/Nokia.png"
+                  alt="nokia brand"
+                />
+              </a>
+
+              <a href="#" class="brands huawei-brand-card" id="push-card">
+                <img
+                  src="./Images/Logo/mobile-brands/Huawei.png"
+                  alt="huawei brand"
+                />
+              </a>
+
+              <a href="#" class="brands samsung-brand-card">
+                <img
+                  src="./Images/Logo/mobile-brands/Samsung.png"
+                  alt="samsung brand"
+                />
+              </a>
+
+              <a href="#" class="brands iphone-brand-card">
+                <img
+                  src="./Images/Logo/mobile-brands/iPhone.png"
+                  alt="iphone brands"
+                />
+              </a>
+
+              <a href="#" class="brands xiaomi-brand-card">
+                <img
+                  src="./Images/Logo/mobile-brands/Xiaomi.png"
+                  alt="xiaomi brands"
+                />
+              </a>
+
+              <a href="#" class="brands oppo-brand-card">
+                <img
+                  src="./Images/Logo/mobile-brands/Oppo.png"
+                  alt="oppo brand"
+                />
+              </a>
+
+              <div class="brands push"></div>
+              <div class="brands push"></div>
+              <div class="brands push"></div>
+              <div class="brands push"></div>
+
+              <div class="brands push" id="last-push"></div>
+            </div>
+          </div>
+
+          <!-- subscribe part -->
+          <div class="subscribe-container">
+            <div class="why-subscribe">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h1>Subscribe Here</h1>
+                <span
+                  >You can subscibe us with aim of being aware of latest
+                  news</span
+                >
+              </div>
+            </div>
+
+            <div class="subscribe-input">
+              <label for="send-email"></label>
+                <input
+                  type="text"
+                  placeholder="Enter your Email address"
+                  id="send-email"
+                />
+
+                <input type="button" value="Subscribe" />
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <!-- Wrapper container (Main) -->
+
+    <!--footer container -->
+    <div class="footer-container">
+      <footer>
+        <!-- logo container + explaination -->
+        <div class="footer-logo-container">
+          <img src="./Images/Logo/Logo.png" alt="Logo" />
+
+          <h1><a href="#">MOBILE TECH</a></h1>
+
+          <p>
+            Mobile Tech team, every day is looking forward to the best service for you.
+             Here we are trying to give the qualities that you genuinely deserve
+          </p>
+        </div>
+
+        <ul class="footer-services-container">
+          <h1>Services</h1>
+          <li><a href="#">Delivery</a></li>
+          <li class="active-footer"><a href="#">Compare</a></li>
+          <li><a href="#">User Guides</a></li>
+          <li><a href="#">Careers</a></li>
+          <li class="active-footer"><a href="#">About Us</a></li>
+        </ul>
+
+        <ul class="footer-products-container">
+          <h1>Products</h1>
+          <li class="active-footer"><a href="#go-top-sell">Top Selling</a></li>
+          <li class="active-footer">
+            <a href="#go-new-release">New Release</a>
+          </li>
+          <li class="active-footer"><a href="#">All Brands</a></li>
+          <li><a href="#">Special Gifts Terms</a></li>
+        </ul>
+
+        <ul class="footer-newsletter-container">
+          <h1>News Letter</h1>
+          <li>
+            <a href="#">Subscribe</a>
+          </li>
+          <li><a href="#">Unsubscribe</a></li>
+          <div class="social-container">
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-youtube"></a>
+          </div>
+        </ul>
+      </footer>
+
+      <!-- copy right -->
+      <address class="copy-right">
+        Copyright &#169 2021-2021 All Rights Reserved to
+        <a href="./htmls/about.html" title="The Developer of the website">Mahdi Zandian</a>
+      </address>
+    </div>
+
+    <!-- Modal parts -------------------------------------------->
+    <!-- search modal-box -->
+    <div class="modal-container">
+      <span class="modal-close">
+        <i class="fas fa-times"></i>
+      </span>
+      <div class="modal">
+        <h1>What are you looking for ?</h1>
+
+        <input
+          type="text"
+          placeholder="iPhone 12 pro max"
+          id="search-box-input"
+        />
+
+        <i class="fa fa-search search-icon"></i>
+
+        <span class="clear-search">
+          <i class="far fa-times-circle"></i>
+        </span>
+      </div>
+    </div>
+
+    <!-- login account modal-box -->
+    <div class="login-container">
+      <form action="#" class="login-form">
+        <span class="close-login">
+          <i class="fas fa-times"></i>
+        </span>
+        <h1>Login</h1>
+
+        <label for="username">
+          <div>Username</div>
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            class="validate"
+            id="username"
+            placeholder="type your username"
+          />
+        </label>
+
+        <label for="password">
+          <div>Password</div>
+          <i class="fas fa-lock"></i>
+          <input
+            class="validate"
+            type="password"
+            id="password"
+            placeholder="type your password"
+          />
+        </label>
+
+        <div class="forgot-password"><a href="#">Forgot password?</a></div>
+
+        <label for="submit">
+          <input type="submit" id="submit" value="Login" />
+        </label>
+
+        <div class="sign-up-options">
+          <h3>Or Login Using</h3>
+
+          <div class="logo-social-container">
+            <div class="face-book">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <div class="twitter">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+
+            <div class="google">
+              <a href="#"><i class="fab fa-google"></i></a>
+            </div>
+          </div>
+
+          <div class="signup"><a href="#">Create a new accont</a></div>
+        </div>
+      </form>
+    </div>
+
+    <!-- scripts -->
+    <script src="./JS/objects.js"></script>
+    <script src="./JS/header.js"></script>
+    <script src="./JS/main.js"></script>
+    <!-- scripts -->
+  </body>
+</html>
