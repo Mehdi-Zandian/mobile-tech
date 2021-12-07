@@ -51,21 +51,10 @@ const shoppingCard = document.querySelector(".shopping-icon");
 const shoppingCardContainer = document.querySelector(".shopping-card");
 const addToCardSingles = document.querySelectorAll(".add-to-card");
 
-// get all learn more buttons
-setTimeout(() => {
-  const learnMore = document.querySelectorAll(".learn-card");
-
-  learnMore.forEach((button) => {
-    button.addEventListener("click", () => {
-      window.location.replace("comingSonn.html");
-    });
-  });
-}, 1000);
-
 // eventListeners ----------------------------------------
 eventListeners();
 function eventListeners() {
-  // add datalist automaticlly (get from Ajax)
+  // add datalist automaticlly
   document.addEventListener("DOMContentLoaded", loadDataLists);
 
   // first search button events
@@ -85,36 +74,16 @@ function eventListeners() {
 
 // functions ----------------------------------------
 
-// add datalist automaticlly (get from Ajax) (1/2)
-function loadDataLists() {
-  // create the object
-  const XML = new XMLHttpRequest();
+// add datalist (input list + inside HTML) automaticlly
+async function loadDataLists() {
+  // fetch data from json api
+  const res = await fetch("../../JSON/phonesData.json");
+  const data = await res.json();
 
-  // open the object
-  XML.open("GET", "../JSON/phonesData.json", true);
-
-  // load the object
-  XML.onload = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      // get all Samsung phones
-      let phonesDataSamsung = JSON.parse(this.responseText).samsung;
-      // send samsung
-      createDataListOptions(phonesDataSamsung);
-
-      // get all iPhone phones
-      let phonesDataiPhone = JSON.parse(this.responseText).iphone;
-      // send iPhone
-      createDataListOptions(phonesDataiPhone);
-
-      // get all Xiaomi phones
-      let phonesDataXiaomi = JSON.parse(this.responseText).xiaomi;
-      // send Xiaomi
-      createDataListOptions(phonesDataXiaomi);
-    }
-  };
-
-  // send the object
-  XML.send();
+  // add phones to data list
+  createDataListOptions(data.samsung);
+  createDataListOptions(data.iphone);
+  createDataListOptions(data.xiaomi);
 }
 
 // create the option tag of datalists for each brand (2/2)
@@ -170,124 +139,78 @@ function searchSecond() {
 }
 
 // function for all search buttons
-function allSearchBtns(searchedPhone, index) {
+async function allSearchBtns(searchedPhone, index) {
+  // stop loader func
+  const stopLoader = () => {
+    setTimeout(() => {
+      // hide loader
+      document
+        .querySelector(".loader-shadow")
+        .classList.add("loader-shadow-hidden");
+    }, 1300);
+  };
+
   // if the search value is not empty
   if (searchedPhone != "") {
-    // create the object
-    const XML = new XMLHttpRequest();
+    // fetch data from json api
+    const res = await fetch("../../JSON/phonesData.json");
+    const data = await res.json();
 
-    // open the object
-    XML.open("GET", "../JSON/phonesData.json", true);
+    // get all phones
+    const phonesDataSamsung = data.samsung;
+    const phonesDataiPhone = data.iphone;
+    const phonesDataXiaomi = data.xiaomi;
 
-    // load the object
-    XML.onload = function () {
-      if (this.readyState == 4 && this.status == 200) {
-        // get all Samsung phones
-        let phonesDataSamsung = JSON.parse(this.responseText).samsung;
+    // find searched phone
+    const samsungFound = phonesDataSamsung.find(
+      (phone) => phone.name.toLowerCase() == searchedPhone
+    );
+    const iphoneFound = phonesDataiPhone.find(
+      (phone) => phone.name.toLowerCase() == searchedPhone
+    );
+    const xiaomiFound = phonesDataXiaomi.find(
+      (phone) => phone.name.toLowerCase() == searchedPhone
+    );
 
-        // get all iPhone phones
-        let phonesDataiPhone = JSON.parse(this.responseText).iphone;
+    if (samsungFound) {
+      // send it to createTheCard function to make the card and append
+      createTheCard(samsungFound, index);
+      // send it to setSpecsTable function to set the information in table
+      setSpecsTable(samsungFound, index);
+      // stop loader when phone is found
+      stopLoader();
+    } else if (iphoneFound) {
+      createTheCard(iphoneFound, index);
+      setSpecsTable(iphoneFound, index);
+      stopLoader();
+    } else if (xiaomiFound) {
+      createTheCard(xiaomiFound, index);
+      setSpecsTable(xiaomiFound, index);
+      stopLoader();
+    } else {
+      alert("Enter a valid value");
+      stopLoader();
+    }
 
-        // get all Xiaomi phones
-        let phonesDataXiaomi = JSON.parse(this.responseText).xiaomi;
+    //get all learn more buttons
+    const learnMore = document.querySelectorAll(".learn-card");
+    learnMore.forEach((button) => {
+      button.addEventListener("click", () => {
+        window.location.replace("comingSonn.html");
+      });
+    });
 
-        // status of searched value
-        let status = "";
-
-        // find the phone
-        phonesDataSamsung.forEach((phoneSamsung) => {
-          if (phoneSamsung.name.toLowerCase() == searchedPhone) {
-            // start from samsung ***********
-
-            // send it to createTheCard function to make the card and append
-            createTheCard(phoneSamsung, index);
-
-            // send it to setSpecsTable function to set the information in table
-            setSpecsTable(phoneSamsung, index);
-
-            // change status
-            status = "ok";
-          }
-
-          // Next is iPhone ***********
-          phonesDataiPhone.forEach((phoneIPhone) => {
-            if (phoneIPhone.name.toLowerCase() == searchedPhone) {
-              // send it to createTheCard function to make the card and append
-              createTheCard(phoneIPhone, index);
-
-              // send it to setSpecsTable function to set the information in table
-              setSpecsTable(phoneIPhone, index);
-
-              // change status
-              status = "ok";
-            }
-
-            // Next is Xiaomi ***********
-            phonesDataXiaomi.forEach((phoneXiaomi) => {
-              if (phoneXiaomi.name.toLowerCase() == searchedPhone) {
-                // send it to createTheCard function to make the card and append
-                createTheCard(phoneXiaomi, index);
-
-                // send it to setSpecsTable function to set the information in table
-                setSpecsTable(phoneXiaomi, index);
-
-                // change status
-                status = "ok";
-              }
-            });
-          });
-        });
-
-        // // get all learn more buttons
-        setTimeout(() => {
-          const learnMore = document.querySelectorAll(".learn-card");
-
-          learnMore.forEach((button) => {
-            button.addEventListener("click", () => {
-              window.location.replace("comingSonn.html");
-            });
-          });
-        }, 500);
-
-        // eventListeners for phonecard buttons
-        if (index == 0) {
-          setTimeout(() => {
-            // eventListenr for first phone add-to-card button
-            document
-              .querySelector(".card-0")
-              .addEventListener("click", addToCard);
-          }, 500);
-        } else if (index == 1) {
-          setTimeout(() => {
-            // eventListenr for first phone add-to-card button
-            document
-              .querySelector(".card-1")
-              .addEventListener("click", addToCard);
-          }, 500);
-        }
-
-        // if searched value was wrong (not Ok) then alert
-        if (status != "ok") {
-          // else if it is empty
-          alert("Enter a valid value");
-          seachInputFirst.value = "";
-        } else if ((status = "ok")) {
-          setTimeout(() => {
-            // hide loader
-            document
-              .querySelector(".loader-shadow")
-              .classList.add("loader-shadow-hidden");
-          }, 1300);
-        }
-      }
-    };
-
-    // send the object
-    XML.send();
+    // add eventlistener to add-to-card btn
+    if (index == 0) {
+      document.querySelector(".card-0").addEventListener("click", addToCard);
+    } else {
+      document.querySelector(".card-1").addEventListener("click", addToCard);
+    }
   } else {
     // else if it is empty
     alert("Enter a valid value");
     seachInputFirst.value = "";
+    stopLoader();
   }
 }
 

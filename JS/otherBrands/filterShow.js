@@ -72,33 +72,9 @@ const sortContainer = document.querySelector(".sort-container");
 const sortOptionsContainer = document.querySelector(".sort-options-container");
 const sortOptions = document.querySelectorAll(".sort-options-container label");
 const selectedSort = document.querySelector(".selected-sort");
-
 //
 const shoppingCard = document.querySelector(".shopping-icon");
 const shoppingCardContainer = document.querySelector(".shopping-card");
-
-// get all add to card buttons
-let addToCardBtns;
-setTimeout(() => {
-  // get all add to card buttons
-  addToCardBtns = document.querySelectorAll(".add-to-cart");
-
-  // add-phone-to-card on click event
-  addToCardBtns.forEach((button) => {
-    button.addEventListener("click", addToCard);
-  });
-}, 4500);
-
-// get all learn more buttons
-setTimeout(() => {
-  const learnMore = document.querySelectorAll(".buy-now");
-
-  learnMore.forEach((button) => {
-    button.addEventListener("click", () => {
-      window.location.replace("comingSonn.html");
-    });
-  });
-}, 4500);
 
 // eventListener ----------------------------------
 eventListeners();
@@ -203,100 +179,63 @@ function optionFilterEvent(option) {
       .insertBefore(loader, document.querySelector(".phones-container"));
 
     // bring the new filter cards to document after 3 seconds **********************
-    setTimeout(() => {
-      // create the object
-      const XML = new XMLHttpRequest();
+    setTimeout(async () => {
+      // fetch data from json api
+      const res = await fetch("../../JSON/phonesData.json");
+      const data = await res.json();
 
-      // open the object
-      XML.open("GET", "../JSON/phonesData.json", true);
+      // find the target brand and then bring all cards to the document
+      if (nameOfFilter == "Samsung") {
+        phoneCardHTMLFactory(data.samsung);
+      } else if (nameOfFilter == "Apple") {
+        phoneCardHTMLFactory(data.iphone);
+      } else if (nameOfFilter == "Xiaomi") {
+        phoneCardHTMLFactory(data.xiaomi);
+      } else {
+        phoneCardHTMLFactory(data.samsung);
+        phoneCardHTMLFactory(data.iphone);
+        phoneCardHTMLFactory(data.xiaomi);
+      }
 
-      // load the object
-      XML.onload = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          // get all Samsung phones
-          let phonesDataSamsung = JSON.parse(this.responseText).samsung;
+      // remove the loader img tag
+      loader.remove();
 
-          // get all iPhone phones
-          let phonesDataiPhone = JSON.parse(this.responseText).iphone;
-
-          // get all Xiaomi phones
-          let phonesDataXiaomi = JSON.parse(this.responseText).xiaomi;
-
-          // remove the loader img tag
-          loader.remove();
-
-          // show filter and sort containers
-          filterContainer.style.opacity = "1";
-          filterContainer.style.pointerEvents = "all";
-          sortContainer.style.opacity = "1";
-          sortContainer.style.pointerEvents = "all";
-
-          // find the target brand and then bring all cards to the document
-          if (nameOfFilter == "Samsung") {
-            // bring samsung on
-            phoneCardHTMLFactory(phonesDataSamsung);
-          } else if (nameOfFilter == "Apple") {
-            // bring iphone on
-            phoneCardHTMLFactory(phonesDataiPhone);
-          } else if (nameOfFilter == "Xiaomi") {
-            // bring xiaomi on
-            phoneCardHTMLFactory(phonesDataXiaomi);
-          } else {
-            // bring all on
-            phoneCardHTMLFactory(phonesDataSamsung);
-            phoneCardHTMLFactory(phonesDataiPhone);
-            phoneCardHTMLFactory(phonesDataXiaomi);
-          }
-
-          // get all add-to-card buttons + Add eventListener to them
-          setTimeout(() => {
-            // get all add to card buttons
-            addToCardBtns = document.querySelectorAll(".add-to-cart");
-
-            // add-phone-to-card on click event
-            addToCardBtns.forEach((button) => {
-              button.addEventListener("click", addToCard);
-            });
-          }, 1000);
-
-          // get all learn more buttons
-          setTimeout(() => {
-            const learnMore = document.querySelectorAll(".buy-now");
-
-            learnMore.forEach((button) => {
-              button.addEventListener("click", () => {
-                window.location.replace("comingSonn.html");
-              });
-            });
-          }, 1000);
-        }
-      };
-
-      // send the object
-      XML.send();
+      // show filter and sort containers
+      filterContainer.style.opacity = "1";
+      filterContainer.style.pointerEvents = "all";
+      sortContainer.style.opacity = "1";
+      sortContainer.style.pointerEvents = "all";
 
       // hide All the prodcuts except first 6 cards
-      setTimeout(() => {
-        // get all phones
-        let phones = document.querySelectorAll(".product");
+      let phones = document.querySelectorAll(".product");
+      let currentIndex = 5;
+      // so display none the rest
+      for (let i = phones.length - 1; i > currentIndex; i--) {
+        if (!(phones.length < currentIndex)) {
+          // check if we have more than 6 cards
+          phones[i].classList.add("product-hidden");
 
-        // index of cards that want to be visible
-        let currentIndex = 5;
-
-        // so display none the rest
-        for (let i = phones.length - 1; i > currentIndex; i--) {
-          if (!(phones.length < currentIndex)) {
-            // check if we have more than 6 cards
-            phones[i].classList.add("product-hidden");
-
-            // change the display of load-more button to block
-            loadMore.style.display = "block";
-          } else {
-            // if we have less than 6 cards then remove button
-            loadMore.style.display = "none";
-          }
+          // change the display of load-more button to block
+          loadMore.style.display = "block";
+        } else {
+          // if we have less than 6 cards then remove button
+          loadMore.style.display = "none";
         }
-      }, 100);
+      }
+
+      // get all add-to-card buttons + Add eventListener to them
+      const addToCardBtns = document.querySelectorAll(".add-to-cart");
+      addToCardBtns.forEach((button) => {
+        button.addEventListener("click", addToCard);
+      });
+
+      // get all learn more buttons
+      const learnMore = document.querySelectorAll(".buy-now");
+      learnMore.forEach((button) => {
+        button.addEventListener("click", () => {
+          window.location.replace("comingSonn.html");
+        });
+      });
     }, 3000);
   }
 }
@@ -386,63 +325,35 @@ function priceFilter(nameOfSort) {
   // remove load more button
   loadMore.style.display = "none";
 
-  // create the object of AJAX ******************
-  const XML = new XMLHttpRequest();
+  // get data
+  const fetchData = async () => {
+    // fetch data from json api
+    const res = await fetch("../../JSON/phonesData.json");
+    const data = await res.json();
 
-  // open XML
-  XML.open("GET", "../JSON/phonesData.json", true);
-
-  // load XML
-  XML.onload = function () {
-    if (this.readyState == 4 || this.status == 200) {
-      // get all Samsung phones
-      let phonesDataSamsung = JSON.parse(this.responseText).samsung;
-
-      // get all iPhone phones
-      let phonesDataiPhone = JSON.parse(this.responseText).iphone;
-
-      // get all Xiaomi phones
-      let phonesDataXiaomi = JSON.parse(this.responseText).xiaomi;
-
-      if (nameOfFilter == "Samsung") {
-        // send samsung
-        priceFilterCreate(phonesDataSamsung, prices);
-      } else if (nameOfFilter == "Apple") {
-        // send iphone
-        priceFilterCreate(phonesDataiPhone, prices);
-      } else if (nameOfFilter == "Xiaomi") {
-        // send xiaomi
-        priceFilterCreate(phonesDataXiaomi, prices);
-      } else {
-        // put all phones in one array
-        let allPhones = [];
-        phonesDataSamsung.forEach((e) => allPhones.push(e));
-        phonesDataiPhone.forEach((e) => allPhones.push(e));
-        phonesDataXiaomi.forEach((e) => allPhones.push(e));
-
-        // send all
-        priceFilterCreate(allPhones, prices);
-      }
+    if (nameOfFilter == "Samsung") {
+      priceFilterCreate(data.samsung, prices);
+    } else if (nameOfFilter == "Apple") {
+      priceFilterCreate(data.iphone, prices);
+    } else if (nameOfFilter == "Xiaomi") {
+      priceFilterCreate(data.xiaomi, prices);
+    } else {
+      let allPhones = [];
+      data.samsung.forEach((e) => allPhones.push(e));
+      data.iphone.forEach((e) => allPhones.push(e));
+      data.xiaomi.forEach((e) => allPhones.push(e));
+      priceFilterCreate(allPhones, prices);
     }
-  };
 
-  // send XML
-  XML.send();
-
-  // hide All the prodcuts except first 6 cards
-  setTimeout(() => {
-    // get all phones
+    // hide All the prodcuts except first 6 cards
     let phones = document.querySelectorAll(".product");
-
     // index of cards that want to be visible
     let currentIndex = 5;
-
     // so display none the rest
     for (let i = phones.length - 1; i > currentIndex; i--) {
       if (!(phones.length < currentIndex)) {
         // check if we have more than 6 cards
         phones[i].classList.add("product-hidden");
-
         // change the display of load-more button to block
         loadMore.style.display = "block";
       } else {
@@ -450,7 +361,22 @@ function priceFilter(nameOfSort) {
         loadMore.style.display = "none";
       }
     }
-  }, 100);
+
+    // get all add-to-card buttons + Add eventListener to them
+    const addToCardBtns = document.querySelectorAll(".add-to-cart");
+    addToCardBtns.forEach((button) => {
+      button.addEventListener("click", addToCard);
+    });
+
+    // get all learn more buttons
+    const learnMore = document.querySelectorAll(".buy-now");
+    learnMore.forEach((button) => {
+      button.addEventListener("click", () => {
+        window.location.replace("comingSonn.html");
+      });
+    });
+  };
+  fetchData();
 }
 
 // creating the products after computing price filter

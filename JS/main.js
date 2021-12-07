@@ -1,5 +1,5 @@
 // function for phone cards HTML ----------------------------------
-function phoneCardHTMLFactory(brand) {
+function createDataListOptions(brand) {
   // get all phones of brand one by one
   brand.forEach((phone) => {
     const phoneCardHTML = `
@@ -106,27 +106,14 @@ const brandsItems = document.querySelectorAll(".brands");
 const shoppingCard = document.querySelector(".shopping-icon");
 const shoppingCardContainer = document.querySelector(".shopping-card");
 
-// get all add to card buttons
-let addToCardBtns = null;
-
-// get all learn more buttons
-setTimeout(() => {
-  const learnMore = document.querySelectorAll(".buy-now");
-
-  learnMore.forEach((button) => {
-    button.addEventListener("click", () => {
-      window.location.replace("htmls/comingSonn.html");
-    });
-  });
-}, 4600);
-
 // objects -------------------------------------------
+// new release slider object
 let newReleaseSlider;
 
-// // top selling slider object
+// top selling slider object
 let topSellingSlider;
 
-// // phone brands slider object
+//phone brands slider object
 let phoneBrandsSlider = new SliderActions(brandsContainer, brandsItems);
 
 // eventListeners -------------------------------------------
@@ -162,78 +149,41 @@ function eventListener() {
 
 // functions
 // addCards to containers on content load
-function addCardsToContainers() {
-  // create a new object of XML
-  const XML = new XMLHttpRequest();
+async function addCardsToContainers() {
+  // fetch data from json api
+  const res = await fetch("./JSON/phonesData.json");
+  const data = await res.json();
 
-  // open xml
-  XML.open("GET", "./JSON/phonesData.json", true);
+  // add phones to document
+  createDataListOptions(data.samsung);
+  createDataListOptions(data.iphone);
+  createDataListOptions(data.xiaomi);
 
-  // load xml
-  XML.onload = function () {
-    // if the conenction is right go on
-    if (this.status === 200 && this.readyState === 4) {
-      // get all Samsung phones
-      let phonesDataSamsung = JSON.parse(this.responseText).samsung;
+  // add "add to card" eventlistener
+  let addToCardBtns = document.querySelectorAll(".add-to-cart");
+  addToCardBtns.forEach((button) => {
+    button.addEventListener("click", addToCard);
+  });
 
-      // get all iPhone phones
-      let phonesDataiPhone = JSON.parse(this.responseText).iphone;
+  // new release slider object
+  const newReleaseProducts = document.querySelectorAll(".new-release-products");
+  newReleaseSlider = new ProductSlider(containerNewRelease, newReleaseProducts);
+  newReleaseSlider.findFirstAndLast();
+  newReleaseSlider.hideButtons(nextNewProduct, prevNewProduct);
 
-      // get all Xiaomi phones
-      let phonesDataXiaomi = JSON.parse(this.responseText).xiaomi;
+  // new release slider object
+  const topSellProducts = document.querySelectorAll(".top-sell-products");
+  topSellingSlider = new ProductSlider(containerTopSell, topSellProducts);
+  topSellingSlider.findFirstAndLast();
+  topSellingSlider.hideButtons(nextTopProduct, prevTopProduct);
 
-      // add Samsung phones to document
-      phoneCardHTMLFactory(phonesDataSamsung);
-
-      // add iPhone phones to document
-      phoneCardHTMLFactory(phonesDataiPhone);
-
-      // add Xiaomi phones to document
-      phoneCardHTMLFactory(phonesDataXiaomi);
-
-      setTimeout(() => {
-        addToCardBtns = document.querySelectorAll(".add-to-cart");
-
-        // add phone to card on click
-        addToCardBtns.forEach((button) => {
-          button.addEventListener("click", addToCard);
-        });
-      }, 1500);
-
-      setTimeout(() => {
-        const newReleaseProducts = document.querySelectorAll(
-          ".new-release-products"
-        );
-
-        // new release slider object
-        newReleaseSlider = new ProductSlider(
-          containerNewRelease,
-          newReleaseProducts
-        );
-
-        // finding first and last card
-        newReleaseSlider.findFirstAndLast();
-
-        // hide buttons on content load
-        newReleaseSlider.hideButtons(nextNewProduct, prevNewProduct);
-      }, 1500);
-
-      setTimeout(() => {
-        const topSellProducts = document.querySelectorAll(".top-sell-products");
-
-        topSellingSlider = new ProductSlider(containerTopSell, topSellProducts);
-
-        // finding first and last card
-        topSellingSlider.findFirstAndLast();
-
-        // hide buttons on content load
-        topSellingSlider.hideButtons(nextTopProduct, prevTopProduct);
-      }, 1500);
-    }
-  };
-
-  // send the xml
-  XML.send();
+  // get all learn more buttons
+  const learnMore = document.querySelectorAll(".buy-now");
+  learnMore.forEach((button) => {
+    button.addEventListener("click", () => {
+      window.location.replace("htmls/comingSonn.html");
+    });
+  });
 }
 
 // product slider -------------------------------------------

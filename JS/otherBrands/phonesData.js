@@ -98,71 +98,55 @@ function loadPhones() {
     .insertBefore(loader, document.querySelector(".phones-container"));
 
   // bring phones to document after 4 seconds *****
-  setTimeout(() => {
-    // create a new object of XML
-    const XML = new XMLHttpRequest();
+  setTimeout(async () => {
+    // fetch data from json api
+    const res = await fetch("../../JSON/phonesData.json");
+    const data = await res.json();
 
-    // open xml
-    XML.open("GET", "../JSON/phonesData.json", true);
+    // add phones to document
+    phoneCardHTMLFactory(data.samsung);
+    phoneCardHTMLFactory(data.iphone);
+    phoneCardHTMLFactory(data.xiaomi);
 
-    // load xml
-    XML.onload = function () {
-      // if the conenction is right go on
-      if (this.status === 200 && this.readyState === 4) {
-        // get all Samsung phones
-        let phonesDataSamsung = JSON.parse(this.responseText).samsung;
+    // remove the loader img
+    loader.remove();
 
-        // get all iPhone phones
-        let phonesDataiPhone = JSON.parse(this.responseText).iphone;
-
-        // get all Xiaomi phones
-        let phonesDataXiaomi = JSON.parse(this.responseText).xiaomi;
-
-        // remove the loader img
-        loader.remove();
-
-        // show filter and sort containers
-        filterContainer.style.opacity = "1";
-        filterContainer.style.pointerEvents = "all";
-        sortContainer.style.opacity = "1";
-        sortContainer.style.pointerEvents = "all";
-
-        // add Samsung phones to document
-        phoneCardHTMLFactory(phonesDataSamsung);
-
-        // add iPhone phones to document
-        phoneCardHTMLFactory(phonesDataiPhone);
-
-        // add Xiaomi phones to document
-        phoneCardHTMLFactory(phonesDataXiaomi);
-      }
-    };
-
-    // send the xml
-    XML.send();
+    // show filter and sort containers
+    filterContainer.style.opacity = "1";
+    filterContainer.style.pointerEvents = "all";
+    sortContainer.style.opacity = "1";
+    sortContainer.style.pointerEvents = "all";
 
     // hide All the prodcuts except first 6 cards
-    setTimeout(() => {
-      // get all products
-      let products = document.querySelectorAll(".product");
+    let products = document.querySelectorAll(".product");
+    let currentIndex = 5;
+    // so display none the rest
+    for (let i = products.length - 1; i > currentIndex; i--) {
+      if (!(products.length < currentIndex)) {
+        // check if we have more than 6 cards
+        products[i].classList.add("product-hidden");
 
-      // index of cards that want to be visible
-      let currentIndex = 5;
-
-      // so display none the rest
-      for (let i = products.length - 1; i > currentIndex; i--) {
-        if (!(products.length < currentIndex)) {
-          // check if we have more than 6 cards
-          products[i].classList.add("product-hidden");
-
-          // change the display of load-more button to block
-          loadMore.style.display = "block";
-        } else {
-          // if we have less than 6 cards then remove button
-          loadMore.style.display = "none";
-        }
+        // change the display of load-more button to block
+        loadMore.style.display = "block";
+      } else {
+        // if we have less than 6 cards then remove button
+        loadMore.style.display = "none";
       }
-    }, 200);
+    }
+
+    // get all add-to-card buttons + Add eventListener to them
+    const addToCardBtns = document.querySelectorAll(".add-to-cart");
+    addToCardBtns.forEach((button) => {
+      button.addEventListener("click", addToCard);
+    });
+
+    // get all learn more buttons
+    const learnMore = document.querySelectorAll(".buy-now");
+    learnMore.forEach((button) => {
+      button.addEventListener("click", () => {
+        window.location.replace("comingSonn.html");
+      });
+    });
   }, 4000);
 }
 
