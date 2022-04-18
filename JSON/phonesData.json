@@ -2,7 +2,7 @@
   "samsung": [
     {
       "name": "Galaxy S21",
-      "image": "../Images/Mobiles/samsung/galaxy-s21.jpg",
+      "image": "Images/Mobiles/samsung/galaxy-s21.jpg",
       "mainPrice": "799",
       "off": "true",
       "discount": "700",
@@ -20,7 +20,7 @@
     },
     {
       "name": "Galaxy Note20",
-      "image": "../Images/Mobiles/samsung/galaxy-note20.jpg",
+      "image": "Images/Mobiles/samsung/galaxy-note20.jpg",
       "mainPrice": "1299",
       "off": "true",
       "discount": "849",
@@ -38,7 +38,7 @@
     },
     {
       "name": "Galaxy S10 256G",
-      "image": "../Images/Mobiles/samsung/galaxy-s10.jpg",
+      "image": "Images/Mobiles/samsung/galaxy-s10.jpg",
       "mainPrice": "1149",
       "off": "true",
       "discount": "999",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Galaxy Z Fold",
-      "image": "../Images/Mobiles/samsung/galaxy-zfold.jpg",
+      "image": "Images/Mobiles/samsung/galaxy-zfold.jpg",
       "mainPrice": "1799",
       "off": "true",
       "discount": "1199",
@@ -74,7 +74,7 @@
     },
     {
       "name": "Galaxy A52",
-      "image": "../Images/Mobiles/samsung/galaxy-a52.jpg",
+      "image": "Images/Mobiles/samsung/galaxy-a52.jpg",
       "mainPrice": "499",
       "off": "true",
       "discount": "374",
@@ -94,7 +94,7 @@
   "iphone": [
     {
       "name": "iPhone 11 Pro Max",
-      "image": "../Images/Mobiles/iphone/iphone-11promax.jpg",
+      "image": "Images/Mobiles/iphone/iphone-11promax.jpg",
       "mainPrice": "999",
       "off": "true",
       "discount": "799",
@@ -112,7 +112,7 @@
     },
     {
       "name": "iPhone XR",
-      "image": "../Images/Mobiles/iphone/iphone-xr.jpg",
+      "image": "Images/Mobiles/iphone/iphone-xr.jpg",
       "mainPrice": "499",
       "off": "true",
       "discount": "299",
@@ -130,7 +130,7 @@
     },
     {
       "name": "iPhone 12 64G",
-      "image": "../Images/Mobiles/iphone/iphone-12.jpg",
+      "image": "Images/Mobiles/iphone/iphone-12.jpg",
       "mainPrice": "829",
       "off": "true",
       "discount": "629",
@@ -148,7 +148,7 @@
     },
     {
       "name": "iPhone 12 pro",
-      "image": "../Images/Mobiles/iphone/iphone-12pro.jpg",
+      "image": "Images/Mobiles/iphone/iphone-12pro.jpg",
       "mainPrice": "999",
       "off": "true",
       "discount": "799",
@@ -166,7 +166,7 @@
     },
     {
       "name": "iPhone X 256G",
-      "image": "../Images/Mobiles/iphone/iphone-x.jpg",
+      "image": "Images/Mobiles/iphone/iphone-x.jpg",
       "mainPrice": "329",
       "off": "true",
       "discount": "280",
@@ -186,7 +186,7 @@
   "xiaomi": [
     {
       "name": "Xiaomi Mi11 Ultra",
-      "image": "../Images/Mobiles/xiaomi/xiaomi-mi11ultra.jpg",
+      "image": "Images/Mobiles/xiaomi/xiaomi-mi11ultra.jpg",
       "mainPrice": "1125",
       "off": "true",
       "discount": "899",
@@ -204,7 +204,7 @@
     },
     {
       "name": "Xiaomi Redmi Note10",
-      "image": "../Images/Mobiles/xiaomi/xiaomi-redminote10.jpg",
+      "image": "Images/Mobiles/xiaomi/xiaomi-redminote10.jpg",
       "mainPrice": "1099",
       "off": "true",
       "discount": "850",
@@ -222,7 +222,7 @@
     },
     {
       "name": "Xiaomi Redmi 9t",
-      "image": "../Images/Mobiles/xiaomi/xiaomi-redmi9t.jpg",
+      "image": "Images/Mobiles/xiaomi/xiaomi-redmi9t.jpg",
       "mainPrice": "191",
       "off": "flase",
       "discount": "191",
@@ -240,7 +240,7 @@
     },
     {
       "name": "Xiaomi Redmi Note7",
-      "image": "../Images/Mobiles/xiaomi/xiaomi-redminote7.jpg",
+      "image": "Images/Mobiles/xiaomi/xiaomi-redminote7.jpg",
       "mainPrice": "294",
       "off": "true",
       "discount": "200",
@@ -258,7 +258,7 @@
     },
     {
       "name": "Xiaomi Poco M3",
-      "image": "../Images/Mobiles/xiaomi/xiaomi-pocom3.jpg",
+      "image": "Images/Mobiles/xiaomi/xiaomi-pocom3.jpg",
       "mainPrice": "179",
       "off": "false",
       "discount": "179",
